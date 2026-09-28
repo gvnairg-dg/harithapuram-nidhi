@@ -8,361 +8,477 @@
 <meta name="description" content="Gold loans, fixed deposits and recurring deposits for members — a Nidhi company in Alappuzha, Kerala.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@500;700&display=swap">
-</head>
-<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  --ground:#ffffff; --panel:#f1f5f3; --panel-2:#e6eeea; --line:#d5e0db;
-  --ink:#12211e; --muted:#566864; --faint:#8a9a96;
-  --deep:#0c3b35; --deep-2:#135a50; --on-deep:#f3f7f5; --on-deep-muted:#b9cfc9;
-  --gold:#c38a22; --gold-2:#e0ae4e; --gold-soft:#f7ebcf; --on-gold:#2a1c02;
-  --alert:#b3321e; --ok:#1c7a4c;
-  --shadow:0 10px 30px -12px rgba(12,59,53,.25);
-  --radius:14px;
-  --display:"Marcellus", "Iowan Old Style", Georgia, serif;
-  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
-  --ml:"Noto Sans Malayalam", "Kartika", sans-serif;
+  --ground:#ffffff; --panel:#f3f6f4; --panel-2:#e8efeb; --line:#dbe4df;
+  --ink:#0f1f1c; --muted:#53655f; --faint:#8a9a95;
+  --deep:#083a33; --deep-2:#0f5147; --deep-3:#157061; --on-deep:#f4f8f6; --on-deep-muted:#b7cdc6;
+  --gold:#c1891f; --gold-2:#e2b04d; --gold-3:#f5d68c; --gold-soft:#fbf1da; --on-gold:#281a02;
+  --alert:#b3321e; --ok:#16774a;
+  --shadow-sm:0 2px 6px rgba(8,58,51,.06);
+  --shadow:0 18px 40px -18px rgba(8,58,51,.28);
+  --shadow-lg:0 30px 60px -24px rgba(8,58,51,.38);
+  --radius:16px;
+  --gold-grad:linear-gradient(135deg,#f5d68c 0%,#e2b04d 35%,#c1891f 70%,#9a6a12 100%);
+  --hero-grad:radial-gradient(900px 480px at 85% 10%,rgba(226,176,77,.22),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(21,112,97,.55),transparent 60%),linear-gradient(135deg,#052722 0%,#083a33 45%,#0f5147 100%);
+  --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --ml:"Noto Sans Malayalam","Kartika","Nirmala UI",sans-serif;
+  --best:"Best rate";
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --ground:#0a1513; --panel:#11201d; --panel-2:#172b27; --line:#233a35;
-    --ink:#e6efec; --muted:#a3b6b1; --faint:#72857f;
-    --deep:#0e2d29; --deep-2:#164a43; --on-deep:#eef5f2; --on-deep-muted:#a9c2bb;
-    --gold:#e0ae4e; --gold-2:#f0c56d; --gold-soft:#2c2412; --on-gold:#1f1502;
+    --ground:#08120f; --panel:#0f1d1a; --panel-2:#152824; --line:#22382f;
+    --ink:#e7f0ed; --muted:#a2b5af; --faint:#72847f;
+    --deep:#0a2a25; --deep-2:#124640; --deep-3:#1a6358; --on-deep:#eef5f2; --on-deep-muted:#a9c2bb;
+    --gold:#e2b04d; --gold-2:#f0c56d; --gold-3:#f7dc9c; --gold-soft:#2a2210; --on-gold:#1f1502;
     --alert:#ef7a63; --ok:#5cc58e;
-    --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+    --shadow-sm:0 2px 6px rgba(0,0,0,.3);
+    --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+    --shadow-lg:0 30px 60px -24px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --ground:#0a1513; --panel:#11201d; --panel-2:#172b27; --line:#233a35;
-  --ink:#e6efec; --muted:#a3b6b1; --faint:#72857f;
-  --deep:#0e2d29; --deep-2:#164a43; --on-deep:#eef5f2; --on-deep-muted:#a9c2bb;
-  --gold:#e0ae4e; --gold-2:#f0c56d; --gold-soft:#2c2412; --on-gold:#1f1502;
+  --ground:#08120f; --panel:#0f1d1a; --panel-2:#152824; --line:#22382f;
+  --ink:#e7f0ed; --muted:#a2b5af; --faint:#72847f;
+  --deep:#0a2a25; --deep-2:#124640; --deep-3:#1a6358; --on-deep:#eef5f2; --on-deep-muted:#a9c2bb;
+  --gold:#e2b04d; --gold-2:#f0c56d; --gold-3:#f7dc9c; --gold-soft:#2a2210; --on-gold:#1f1502;
   --alert:#ef7a63; --ok:#5cc58e;
-  --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+  --shadow-sm:0 2px 6px rgba(0,0,0,.3);
+  --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+  --shadow-lg:0 30px 60px -24px rgba(0,0,0,.8);
 }
+html[lang="ml"]{--display:var(--ml);--body:var(--ml);--best:"മികച്ച നിരക്ക്"}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--ground);color:var(--ink);font:400 15px/1.6 var(--body);margin:0}
+body{background:var(--ground);color:var(--ink);font:400 15px/1.6 var(--body);margin:0;-webkit-font-smoothing:antialiased}
+html[lang="ml"] body{line-height:1.75;font-size:14.5px}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
-h4{margin:0;font-size:1rem;font-weight:700}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;margin:0}
+html[lang="ml"] h1,html[lang="ml"] h2,html[lang="ml"] h3{letter-spacing:0;line-height:1.35;font-weight:700}
+h4{margin:0;font-size:1rem;font-weight:700;font-family:var(--display)}
 p{margin:0}
 button,input,select{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:6px}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:20px}
-.ml{font-family:var(--ml)}
 .num{font-variant-numeric:tabular-nums}
-.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:11px 22px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .15s, background .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn-gold{background:var(--gold);color:var(--on-gold)}
-.btn-gold:hover{background:var(--gold-2)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor;border-radius:2px}
+html[lang="ml"] .eyebrow{letter-spacing:.02em;font-size:.82rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 24px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .15s,box-shadow .15s,background .15s;font-family:var(--display);font-size:.92rem}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2}
+.btn-gold{background:var(--gold-grad);color:var(--on-gold);box-shadow:0 10px 24px -10px rgba(193,137,31,.7)}
+.btn-gold:hover{box-shadow:0 14px 28px -10px rgba(193,137,31,.85)}
 .btn-deep{background:var(--deep);color:var(--on-deep)}
-.btn-line{background:transparent;border:1.5px solid currentColor}
-/* kasavu: the gold border of a Kerala mundu — the site's signature rule */
-.kasavu{height:7px;background:
-  linear-gradient(var(--gold),var(--gold)) top/100% 3px no-repeat,
-  linear-gradient(var(--gold-2),var(--gold-2)) bottom/100% 1px no-repeat;}
+.btn-deep:hover{background:var(--deep-2)}
+.btn-line{background:rgba(255,255,255,.04);border:1.5px solid currentColor}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--on-deep);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
 
-/* ---------- utility bar (bank-style segment switcher) ---------- */
-.util{background:var(--deep);color:var(--on-deep-muted);font-size:.82rem}
-.util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:38px;flex-wrap:wrap}
+/* ---------- utility bar ---------- */
+.util{background:#04201c;color:var(--on-deep-muted);font-size:.82rem}
+.util .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;flex-wrap:wrap}
 .segs{display:flex;gap:2px;overflow-x:auto}
-.segs button{background:none;border:0;color:var(--on-deep-muted);padding:9px 12px;cursor:pointer;font-weight:600;border-bottom:2px solid transparent;white-space:nowrap}
+.segs button{background:none;border:0;color:var(--on-deep-muted);padding:10px 12px;cursor:pointer;font-weight:600;border-bottom:2px solid transparent;white-space:nowrap}
+.segs button:hover{color:var(--on-deep)}
 .segs button[aria-pressed="true"]{color:var(--on-deep);border-bottom-color:var(--gold-2)}
 .util-right{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .util-right a{text-decoration:none;color:var(--on-deep-muted)}
 .util-right a:hover{color:var(--on-deep)}
-.lang{border:1px solid var(--deep-2);border-radius:999px;padding:3px 10px;background:none;color:var(--on-deep);cursor:pointer}
+.lang{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(226,176,77,.55);border-radius:999px;padding:4px 12px;background:rgba(226,176,77,.1);color:var(--gold-3);cursor:pointer;font-weight:700;font-family:var(--ml)}
+.lang:hover{background:rgba(226,176,77,.22)}
+.lang svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
 
 /* ---------- header ---------- */
-header.main{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--ground);border-bottom:1px solid var(--line)}
-header.main .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+header.main{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--ground) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .2s}
+header.main.scrolled{box-shadow:0 8px 24px -16px rgba(8,58,51,.35)}
+header.main .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
-.brand-mark{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-2),var(--gold) 60%,#8a5f10);display:grid;place-items:center;color:#2a1c02;font-family:var(--display);font-size:1.35rem;box-shadow:inset 0 0 0 3px rgba(255,255,255,.35)}
-.brand-name{font-family:var(--display);font-size:1.3rem;line-height:1;color:var(--deep)}
-:root[data-theme="dark"] .brand-name{color:var(--on-deep)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-name{color:var(--on-deep)}}
-.brand-sub{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px;font-family:var(--body);font-weight:600}
-nav.primary{display:flex;gap:4px;flex:1}
+.brand-mark{width:46px;height:46px;border-radius:14px;background:var(--gold-grad);display:grid;place-items:center;color:#2a1c02;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:1.3rem;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45),0 6px 14px -6px rgba(193,137,31,.8);position:relative}
+.brand-mark::after{content:"";position:absolute;inset:5px;border-radius:10px;border:1px solid rgba(42,28,2,.25)}
+.brand-name{font-family:var(--display);font-weight:800;font-size:1.12rem;line-height:1.1;color:var(--deep);letter-spacing:-.01em}
+.brand-sub{display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:4px;font-family:var(--body);font-weight:700}
+html[lang="ml"] .brand-sub{letter-spacing:.02em;font-size:.74rem}
+:root[data-theme="dark"] header .brand-name{color:var(--on-deep)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) header .brand-name{color:var(--on-deep)}}
+nav.primary{display:flex;gap:2px;flex:1}
 .nav-item{position:relative}
-.nav-item > button{background:none;border:0;padding:24px 12px;font-weight:600;cursor:pointer;color:var(--ink)}
-.nav-item > button::after{content:"";display:inline-block;margin-left:6px;width:6px;height:6px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translateY(-3px)}
-.mega{position:absolute;left:0;top:100%;background:var(--ground);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:repeat(2,minmax(200px,1fr));gap:6px 28px;width:max-content;max-width:560px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s}
+.nav-item > button{background:none;border:0;padding:26px 12px;font-weight:600;cursor:pointer;color:var(--ink);font-family:var(--display);font-size:.93rem}
+.nav-item > button:hover{color:var(--gold)}
+.nav-item > button::after{content:"";display:inline-block;margin-left:7px;width:6px;height:6px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translateY(-3px)}
+.mega{position:absolute;left:0;top:100%;background:var(--ground);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow-lg);padding:18px;display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:4px 18px;width:max-content;max-width:600px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s}
 .nav-item:hover .mega,.nav-item:focus-within .mega{opacity:1;visibility:visible;transform:none}
-.mega a{display:block;text-decoration:none;padding:8px 10px;border-radius:8px}
+.mega a{display:block;text-decoration:none;padding:10px 12px;border-radius:10px}
 .mega a:hover{background:var(--panel)}
-.mega a b{display:block;font-size:.92rem}
+.mega a b{display:block;font-size:.92rem;font-family:var(--display)}
+.mega a:hover b{color:var(--gold)}
 .mega a span{font-size:.8rem;color:var(--muted)}
 .head-cta{display:flex;gap:10px;margin-left:auto}
-.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;padding:9px 11px;cursor:pointer}
-.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0}
-.drawer{display:none;border-top:1px solid var(--line);padding:12px 20px 20px;background:var(--ground)}
-.drawer a{display:block;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
+.head-cta .btn{padding:10px 20px}
+.btn-outline{background:transparent;color:var(--deep-2);border:1.5px solid var(--line)}
+.btn-outline:hover{border-color:var(--gold)}
+:root[data-theme="dark"] .btn-outline{color:var(--on-deep)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-outline{color:var(--on-deep)}}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:12px;padding:9px 11px;cursor:pointer}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
+.drawer{display:none;border-top:1px solid var(--line);padding:8px 20px 20px;background:var(--ground)}
+.drawer a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
 .drawer.open{display:block}
 
 /* ---------- gold rate ticker ---------- */
 .rates{background:var(--gold-soft);border-bottom:1px solid var(--line);font-size:.86rem}
-.rates .wrap{display:flex;gap:26px;align-items:center;min-height:42px;overflow-x:auto;white-space:nowrap}
-.rates b{color:var(--ink)}
-.rates .tag{background:var(--gold);color:var(--on-gold);font-weight:800;font-size:.7rem;letter-spacing:.1em;padding:3px 8px;border-radius:4px;text-transform:uppercase}
+.rates .wrap{display:flex;gap:28px;align-items:center;min-height:44px;overflow-x:auto;white-space:nowrap}
+.rates b{color:var(--ink);font-weight:800}
+.rates .tag{display:inline-flex;align-items:center;gap:7px;background:var(--deep);color:var(--gold-3);font-weight:800;font-size:.7rem;letter-spacing:.1em;padding:5px 10px;border-radius:6px;text-transform:uppercase}
+html[lang="ml"] .rates .tag{letter-spacing:0;font-size:.78rem}
+.rates .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 0 3px rgba(226,176,77,.3);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(226,176,77,0)}}
 .rates .up{color:var(--ok);font-weight:700}
 .rates small{color:var(--muted)}
 
 /* ---------- hero ---------- */
-.hero{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.35fr .9fr;gap:40px;padding-block:48px 56px;align-items:center}
-.slides{position:relative;min-height:330px}
-.slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 200px;gap:24px;align-items:center;opacity:0;visibility:hidden;transition:opacity .5s}
-.slide.on{opacity:1;visibility:visible}
-.slide h1{font-size:clamp(2rem,4.2vw,3.2rem)}
-.slide h1 em{font-style:normal;color:var(--gold-2)}
-.slide p{color:var(--on-deep-muted);margin-top:14px;max-width:46ch;font-size:1.02rem}
-.slide .big{display:flex;align-items:baseline;gap:8px;margin-top:22px}
-.slide .big strong{font-size:2.6rem;font-weight:800;color:var(--on-deep);line-height:1}
+.hero{background:var(--hero-grad);color:var(--on-deep);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 22px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.4fr .92fr;gap:44px;padding-block:56px 96px;align-items:center}
+.slides{position:relative;min-height:360px}
+html[lang="ml"] .slides{min-height:430px}
+.slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 230px;gap:28px;align-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .6s,transform .6s}
+.slide.on{opacity:1;visibility:visible;transform:none}
+.slide .eyebrow{color:var(--gold-3)}
+.slide h1{font-size:clamp(2.1rem,4.4vw,3.4rem);margin-top:14px}
+html[lang="ml"] .slide h1{font-size:clamp(1.7rem,3.3vw,2.5rem)}
+.slide h1 em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.slide p{color:var(--on-deep-muted);margin-top:16px;max-width:48ch;font-size:1.04rem}
+.slide .big{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding:10px 16px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.slide .big strong{font-family:"Plus Jakarta Sans",sans-serif;font-size:2.2rem;font-weight:800;color:var(--gold-3);line-height:1}
 .slide .big span{color:var(--on-deep-muted);font-size:.85rem}
-.slide .acts{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
-.slide .btn-line{color:var(--on-deep)}
-.orn{width:200px;aspect-ratio:1;max-width:100%;position:relative}
-.orn i{position:absolute;border-radius:50%;inset:0;border:14px solid var(--gold);box-shadow:inset 0 0 0 2px rgba(255,255,255,.25),0 0 0 2px rgba(0,0,0,.15)}
-.orn i:nth-child(2){inset:24px;border-color:var(--gold-2);border-width:10px}
-.orn i:nth-child(3){inset:52px;border-color:#a8741a;border-width:8px}
-.orn.coin i{border-width:0;background:radial-gradient(circle at 35% 30%,var(--gold-2),var(--gold) 55%,#8a5f10)}
-.orn.coin i:nth-child(2){inset:18px;background:none;border:2px dashed rgba(42,28,2,.45)}
-.orn.coin i:nth-child(3){inset:0;background:none;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-size:4.2rem;color:#2a1c02;border:0}
-.dots{display:flex;gap:8px;margin-top:22px}
-.dots button{width:30px;height:4px;border:0;border-radius:2px;background:var(--deep-2);cursor:pointer;padding:0}
-.dots button[aria-current="true"]{background:var(--gold-2)}
-.water{position:absolute;left:0;right:0;bottom:0;height:40px;opacity:.35;pointer-events:none;
-  background:repeating-linear-gradient(90deg,transparent 0 28px,var(--deep-2) 28px 60px) 0 12px/100% 2px no-repeat,
-             repeating-linear-gradient(90deg,transparent 0 44px,var(--deep-2) 44px 90px) 20px 24px/100% 2px no-repeat}
+.slide .acts{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.medal-wrap{position:relative;width:230px;max-width:100%;aspect-ratio:1}
+.medal{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff3cf 0%,#f0c56d 22%,#d29a2c 55%,#8f600f 100%);box-shadow:0 40px 70px -25px rgba(0,0,0,.7),inset 0 -10px 24px rgba(90,55,0,.45),inset 0 8px 18px rgba(255,255,255,.45);display:grid;place-items:center;animation:float 6s ease-in-out infinite}
+.medal::before{content:"";position:absolute;inset:16px;border-radius:50%;border:2px solid rgba(90,55,0,.35);box-shadow:inset 0 0 0 6px rgba(255,255,255,.12)}
+.medal::after{content:"";position:absolute;inset:30px;border-radius:50%;border:1.5px dashed rgba(90,55,0,.35)}
+.medal b{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:4.2rem;color:#5a3a02;text-shadow:0 1px 0 rgba(255,255,255,.5),0 -1px 0 rgba(0,0,0,.2);position:relative;z-index:1}
+@keyframes float{50%{transform:translateY(-8px)}}
+.chipf{position:absolute;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.95);color:#0f1f1c;font-size:.76rem;font-weight:700;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);white-space:nowrap;z-index:2}
+.chipf i{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:#e6f3ec;color:#16774a;font-style:normal;font-weight:800}
+.chipf.a{left:-34px;bottom:18px}
+.chipf.b{right:-18px;top:14px}
+.chipf.b i{background:#fbf1da;color:#9a6a12}
+.dots{display:flex;gap:8px;margin-top:26px}
+.dots button{width:28px;height:4px;border:0;border-radius:2px;background:rgba(255,255,255,.22);cursor:pointer;padding:0;transition:width .3s,background .3s}
+.dots button[aria-current="true"]{background:var(--gold-2);width:48px}
 
-.quick{background:var(--ground);color:var(--ink);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--gold)}
-.quick h2{font-size:1.45rem}
+.quick{background:var(--ground);color:var(--ink);border-radius:20px;padding:28px;box-shadow:var(--shadow-lg);position:relative}
+.quick::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;border-radius:20px 20px 0 0;background:var(--gold-grad)}
+.quick h2{font-size:1.4rem}
 .quick p.sub{color:var(--muted);font-size:.86rem;margin-top:4px}
-.quick form{display:grid;gap:12px;margin-top:16px}
-.field label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:5px}
-.field input,.field select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
-.field input:focus,.field select:focus{border-color:var(--gold);outline:none;background:var(--ground)}
+.quick form{display:grid;gap:12px;margin-top:18px}
+.field label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:6px}
+.field input,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);transition:border-color .15s,background .15s,box-shadow .15s}
+.field input:focus,.field select:focus{border-color:var(--gold);outline:none;background:var(--ground);box-shadow:0 0 0 4px rgba(226,176,77,.18)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .consent{display:flex;gap:8px;font-size:.76rem;color:var(--muted);align-items:flex-start}
-.consent input{margin-top:3px}
-.ok-msg{background:var(--panel);border-left:3px solid var(--ok);padding:12px;border-radius:8px;font-size:.88rem}
+.consent input{margin-top:3px;accent-color:var(--gold)}
+.quick .btn{width:100%;padding-block:14px}
+.secure{display:flex;align-items:center;gap:6px;justify-content:center;font-size:.74rem;color:var(--faint)}
+.secure svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2}
+.ok-msg{background:var(--panel);border-left:3px solid var(--ok);padding:14px;border-radius:10px;font-size:.9rem;margin-top:16px}
+
+/* assurance strip overlapping hero */
+.assure{position:relative;z-index:3;margin-top:-52px}
+.assure .grid{background:var(--ground);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr)}
+.as{display:flex;gap:14px;align-items:flex-start;padding:22px 22px}
+.as + .as{border-left:1px solid var(--line)}
+.as .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;flex-shrink:0}
+.as .ic svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.as h4{font-size:.95rem}
+.as p{font-size:.8rem;color:var(--muted);margin-top:2px}
 
 /* ---------- quick tiles ---------- */
-.tiles{margin-top:-1px;background:var(--panel)}
-.tiles .wrap{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;padding-block:22px}
-.tile{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;text-decoration:none;padding:14px 6px;border-radius:12px;font-weight:600;font-size:.84rem;line-height:1.25}
-.tile:hover{background:var(--ground)}
-.tile svg{width:34px;height:34px;stroke:var(--deep-2);fill:none;stroke-width:1.6}
+.tiles{padding-block:44px 10px}
+.tiles .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none;padding:18px 6px;border-radius:16px;font-weight:600;font-size:.84rem;line-height:1.25;border:1px solid transparent;transition:.2s}
+.tile .ti{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--panel);transition:.2s}
+.tile svg{width:28px;height:28px;stroke:var(--deep-2);fill:none;stroke-width:1.6}
+.tile:hover{border-color:var(--line);box-shadow:var(--shadow);transform:translateY(-3px);background:var(--ground)}
+.tile:hover .ti{background:var(--gold-grad)}
+.tile:hover svg{stroke:#3d2800}
 :root[data-theme="dark"] .tile svg{stroke:var(--gold-2)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tile svg{stroke:var(--gold-2)}}
 
 /* ---------- sections ---------- */
-section.s{padding-block:72px}
-.s-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px;flex-wrap:wrap}
-.s-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-top:6px}
-.s-head p{color:var(--muted);max-width:56ch;margin-top:8px}
+section.s{padding-block:80px}
+.s-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px;flex-wrap:wrap}
+.s-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin-top:10px}
+html[lang="ml"] .s-head h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.s-head p{color:var(--muted);max-width:58ch;margin-top:10px;font-size:1.02rem}
 .alt{background:var(--panel)}
 
-/* products — tab switcher */
-.ptabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:26px;overflow-x:auto}
-.ptabs button{background:none;border:0;padding:12px 16px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
-.ptabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.pcard{background:var(--ground);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px}
-.pcard h3{font-size:1.35rem}
-.pcard .rate{display:flex;align-items:baseline;gap:6px}
-.pcard .rate strong{font-size:1.9rem;font-weight:800;color:var(--deep-2)}
+.ptabs{display:inline-flex;gap:4px;padding:5px;background:var(--panel);border:1px solid var(--line);border-radius:999px;margin-bottom:30px;max-width:100%;overflow-x:auto}
+.ptabs button{background:none;border:0;padding:10px 20px;font-weight:700;color:var(--muted);cursor:pointer;border-radius:999px;white-space:nowrap;font-family:var(--display);font-size:.9rem}
+.ptabs button[aria-selected="true"]{color:var(--on-deep);background:var(--deep);box-shadow:var(--shadow-sm)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{background:var(--ground);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold-2)}
+.pcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.pcard .pi{width:50px;height:50px;border-radius:14px;background:var(--gold-soft);display:grid;place-items:center}
+.pcard .pi svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.7}
+.pcard h3{font-size:1.3rem}
+.pcard .rate{display:flex;align-items:baseline;gap:8px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.pcard .rate strong{font-family:"Plus Jakarta Sans",sans-serif;font-size:2.1rem;font-weight:800;color:var(--deep-2);letter-spacing:-.02em}
 :root[data-theme="dark"] .pcard .rate strong{color:var(--gold-2)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pcard .rate strong{color:var(--gold-2)}}
 .pcard .rate span{font-size:.8rem;color:var(--muted)}
-.pcard ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem;display:grid;gap:4px}
+.pcard ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.9rem;display:grid;gap:8px}
+.pcard li{padding-left:24px;position:relative}
+.pcard li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:7px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
 .pcard .btn{margin-top:auto;align-self:flex-start}
-.pcard.feat{background:var(--deep);color:var(--on-deep);border-color:var(--deep)}
+.pcard.feat{background:linear-gradient(160deg,#0f5147,#083a33 70%);color:var(--on-deep);border-color:transparent;box-shadow:var(--shadow)}
+.pcard.feat::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(226,176,77,.35),transparent 70%)}
 .pcard.feat ul{color:var(--on-deep-muted)}
-.pcard.feat .rate strong{color:var(--gold-2)}
+.pcard.feat .rate{border-color:rgba(255,255,255,.15)}
+.pcard.feat .rate strong{color:var(--gold-3)}
 .pcard.feat .rate span{color:var(--on-deep-muted)}
-.chip{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--gold-soft);color:var(--gold);padding:3px 8px;border-radius:4px;align-self:flex-start}
-.pcard.feat .chip{background:var(--gold);color:var(--on-gold)}
+.pcard.feat .pi{background:rgba(226,176,77,.16)}
+.pcard.feat .pi svg{stroke:var(--gold-3)}
+.chip{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--panel-2);color:var(--deep-2);padding:5px 10px;border-radius:999px}
+html[lang="ml"] .chip{letter-spacing:0;font-size:.74rem}
+.pcard.feat .chip{background:var(--gold-grad);color:var(--on-gold)}
+:root[data-theme="dark"] .chip{color:var(--gold-3)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip{color:var(--gold-3)}}
 
 /* rate table */
-.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--ground)}
-table{border-collapse:collapse;width:100%;min-width:560px}
-th,td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line)}
-th{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.rate-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;align-items:start}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:20px;background:var(--ground);box-shadow:var(--shadow-sm)}
+table{border-collapse:collapse;width:100%;min-width:540px}
+th,td{padding:15px 20px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-deep-muted);background:var(--deep);font-weight:700}
+html[lang="ml"] th{letter-spacing:0;font-size:.8rem}
 td.r,th.r{text-align:right}
 tbody tr:last-child td{border-bottom:0}
-tbody tr:hover td{background:var(--panel)}
-.best td{font-weight:700}
-.best td:first-child::after{content:"Best rate";margin-left:10px;font-size:.66rem;background:var(--gold);color:var(--on-gold);padding:2px 7px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}
-.circ{margin-top:12px;font-size:.8rem;color:var(--muted)}
+tbody tr:nth-child(even) td{background:var(--panel)}
+tbody tr:hover td{background:var(--gold-soft)}
+.best td{font-weight:800;color:var(--deep-2)}
+:root[data-theme="dark"] .best td{color:var(--gold-3)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .best td{color:var(--gold-3)}}
+.best td:first-child::after{content:var(--best);margin-left:10px;font-size:.64rem;background:var(--gold-grad);color:var(--on-gold);padding:3px 8px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
+.circ{margin-top:14px;font-size:.8rem;color:var(--muted)}
 .circ b{color:var(--alert)}
+.senior{background:var(--gold-grad);color:var(--on-gold);border-radius:20px;padding:28px;display:grid;gap:12px;box-shadow:var(--shadow)}
+.senior .pct{font-family:"Plus Jakarta Sans",sans-serif;font-size:3.2rem;font-weight:800;line-height:1}
+.senior h3{font-size:1.25rem}
+.senior p{font-size:.92rem;opacity:.85}
+.senior .btn{align-self:flex-start;background:#2a1c02;color:#f5d68c}
 
 /* calculators */
-.calc{display:grid;grid-template-columns:260px 1fr;background:var(--ground);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.ctabs{background:var(--deep);display:flex;flex-direction:column;padding:10px}
-.ctabs button{background:none;border:0;text-align:left;padding:14px 16px;border-radius:10px;color:var(--on-deep-muted);font-weight:600;cursor:pointer}
-.ctabs button[aria-selected="true"]{background:var(--deep-2);color:var(--on-deep);box-shadow:inset 3px 0 0 var(--gold-2)}
-.cpanel{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:30px}
-.sl{display:grid;gap:4px;margin-bottom:20px}
+.calc{display:grid;grid-template-columns:270px 1fr;background:var(--ground);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.ctabs{background:var(--hero-grad);display:flex;flex-direction:column;padding:14px;gap:4px}
+.ctabs button{display:flex;align-items:center;gap:12px;background:none;border:0;text-align:left;padding:14px 14px;border-radius:12px;color:var(--on-deep-muted);font-weight:600;cursor:pointer}
+.ctabs button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
+.ctabs button:hover{color:var(--on-deep)}
+.ctabs button[aria-selected="true"]{background:rgba(255,255,255,.1);color:var(--on-deep);box-shadow:inset 3px 0 0 var(--gold-2)}
+.cpanel{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:34px}
+.sl{display:grid;gap:6px;margin-bottom:22px}
 .sl .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .sl label{font-weight:600;font-size:.9rem}
-.sl output{font-weight:800;background:var(--panel);padding:4px 10px;border-radius:8px;font-variant-numeric:tabular-nums}
-.sl input[type=range]{width:100%;accent-color:var(--gold)}
+.sl output{font-weight:800;background:var(--gold-soft);color:var(--ink);padding:5px 12px;border-radius:10px;font-variant-numeric:tabular-nums}
+.sl input[type=range]{width:100%;accent-color:var(--gold);height:22px}
 .sl .lim{display:flex;justify-content:space-between;font-size:.72rem;color:var(--faint)}
 .seg{display:flex;gap:6px;flex-wrap:wrap}
-.seg button{border:1px solid var(--line);background:var(--ground);border-radius:999px;padding:6px 14px;cursor:pointer;font-weight:600;font-size:.85rem}
+.seg button{border:1px solid var(--line);background:var(--ground);border-radius:999px;padding:7px 16px;cursor:pointer;font-weight:600;font-size:.85rem}
+.seg button:hover{border-color:var(--gold)}
 .seg button[aria-pressed="true"]{background:var(--deep);color:var(--on-deep);border-color:var(--deep)}
-.result{background:var(--panel);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px}
-.result .hl{font-size:.8rem;color:var(--muted);font-weight:600}
-.result .hv{font-size:2.3rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
-.result dl{display:grid;grid-template-columns:1fr auto;gap:8px 12px;margin:0;font-size:.9rem;border-top:1px dashed var(--line);padding-top:14px}
+.result{background:var(--panel);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line)}
+.result .hl{font-size:.82rem;color:var(--muted);font-weight:600}
+.result .hv{font-family:"Plus Jakarta Sans",sans-serif;font-size:2.5rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--deep-2);letter-spacing:-.02em}
+:root[data-theme="dark"] .result .hv{color:var(--gold-3)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .result .hv{color:var(--gold-3)}}
+.result dl{display:grid;grid-template-columns:1fr auto;gap:10px 12px;margin:0;font-size:.9rem;border-top:1px dashed var(--line);padding-top:14px}
 .result dt{color:var(--muted)}
 .result dd{margin:0;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
-.bar{height:10px;border-radius:5px;background:var(--gold-soft);overflow:hidden;display:flex}
-.bar i{display:block;background:var(--deep-2)}
-.bar b{display:block;background:var(--gold)}
+.result .btn{align-self:flex-start;margin-top:4px}
+.bar{height:12px;border-radius:6px;background:var(--gold-soft);overflow:hidden;display:flex}
+.bar i{display:block;background:var(--deep-3);transition:width .3s}
+.bar b{display:block;background:var(--gold);transition:width .3s}
 .legend{display:flex;gap:16px;font-size:.76rem;color:var(--muted)}
-.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--deep-2)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--deep-3)}
 .legend span+span::before{background:var(--gold)}
-.fine{font-size:.74rem;color:var(--faint)}
+.fine{font-size:.76rem;color:var(--faint)}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:st;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--ground)}
-.step{padding:26px;border-right:1px solid var(--line);counter-increment:st}
-.step:last-child{border-right:0}
-.step::before{content:counter(st);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:var(--display);font-size:1.2rem;margin-bottom:14px}
-.step p{color:var(--muted);font-size:.9rem;margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:st;position:relative}
+.steps::before{content:"";position:absolute;left:12%;right:12%;top:30px;border-top:2px dashed var(--gold-2);opacity:.55}
+.step{counter-increment:st;text-align:center;padding:0 8px;position:relative}
+.step::before{content:counter(st);display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:var(--gold-grad);color:#3d2800;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:1.3rem;margin:0 auto 18px;box-shadow:0 0 0 8px var(--panel),0 12px 24px -10px rgba(193,137,31,.8)}
+.step h4{font-size:1.05rem}
+.step p{color:var(--muted);font-size:.9rem;margin-top:8px}
 
 /* trust */
-.trust{background:var(--deep);color:var(--on-deep)}
-.trust .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;padding-block:64px;align-items:center}
-.trust h2{font-size:clamp(1.7rem,3vw,2.4rem)}
-.trust p{color:var(--on-deep-muted);margin-top:14px;max-width:52ch}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--deep-2);border-radius:var(--radius);overflow:hidden}
-.stat{background:var(--deep);padding:22px}
-.stat strong{display:block;font-size:2rem;font-weight:800;color:var(--gold-2);font-variant-numeric:tabular-nums}
-.stat span{font-size:.85rem;color:var(--on-deep-muted)}
-.sample-note{font-size:.72rem;color:var(--on-deep-muted);margin-top:10px;opacity:.8}
+.trust{background:var(--hero-grad);color:var(--on-deep);position:relative;overflow:hidden}
+.trust .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding-block:80px;align-items:center}
+.trust .eyebrow{color:var(--gold-3)}
+.trust h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:10px}
+.trust p{color:var(--on-deep-muted);margin-top:16px;max-width:54ch}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px;backdrop-filter:blur(4px)}
+.stat strong{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-size:2.3rem;font-weight:800;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{font-size:.86rem;color:var(--on-deep-muted)}
+.sample-note{font-size:.72rem;color:var(--on-deep-muted);margin-top:12px;opacity:.75}
 
 /* membership */
-.mem{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.docs{display:grid;gap:10px}
-.doc{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--ground)}
-.doc .ic{width:36px;height:36px;border-radius:10px;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;flex-shrink:0;font-weight:800}
+.mem{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.doc{display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--ground);transition:.2s}
+.doc:hover{box-shadow:var(--shadow);border-color:var(--gold-2)}
+.doc .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center}
+.doc .ic svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8}
 .doc p{color:var(--muted);font-size:.86rem}
-.share{background:var(--ground);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:14px;align-content:start}
-.share .price{font-size:2.4rem;font-weight:800;font-variant-numeric:tabular-nums}
-.checklist{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.92rem}
-.checklist li{padding-left:26px;position:relative}
-.checklist li::before{content:"";position:absolute;left:4px;top:6px;width:10px;height:6px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.share{background:var(--ground);border:1px solid var(--line);border-radius:20px;padding:30px;display:grid;gap:16px;align-content:start;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.share::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--gold-grad)}
+.share .price{font-family:"Plus Jakarta Sans",sans-serif;font-size:3rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.share .price small{font-size:.95rem;color:var(--muted);font-weight:600;margin-left:6px}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.93rem}
+.checklist li{padding-left:30px;position:relative}
+.checklist li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:50%;background:#e6f3ec}
+.checklist li::after{content:"";position:absolute;left:6px;top:7px;width:8px;height:5px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
 
 /* branches */
-.bfilter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
-.bfilter input{padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--ground);min-width:0;flex:1 1 220px;max-width:340px}
-.branches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.branch{background:var(--ground);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:6px;font-size:.88rem}
-.branch h4{font-size:1.02rem}
-.branch .taluk{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.bfilter{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
+.search{position:relative;flex:1 1 240px;max-width:360px}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--faint);fill:none;stroke-width:2}
+.search input{width:100%;padding:12px 16px 12px 40px;border:1px solid var(--line);border-radius:999px;background:var(--ground)}
+.search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(226,176,77,.18)}
+.branches{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.branch{background:var(--ground);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:6px;font-size:.88rem;transition:.2s}
+.branch:hover{box-shadow:var(--shadow);border-color:var(--gold-2);transform:translateY(-2px)}
+.branch h4{font-size:1.05rem}
+.branch .taluk{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+html[lang="ml"] .branch .taluk{letter-spacing:0;font-size:.78rem}
 .branch p{color:var(--muted)}
 .branch .ph{font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);user-select:all}
-.open{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700}
+.open{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;margin-top:4px;color:var(--muted)}
 .open::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--faint)}
 .open.is-open{color:var(--ok)}
-.open.is-open::before{background:var(--ok)}
+.open.is-open::before{background:var(--ok);box-shadow:0 0 0 3px rgba(22,119,74,.18)}
 .empty{grid-column:1/-1;color:var(--muted);padding:20px;text-align:center}
 
 /* notices + faq */
-.two{display:grid;grid-template-columns:1fr 1.3fr;gap:36px}
-.notices{display:grid;gap:0;border-top:1px solid var(--line)}
-.notice{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-.notice time{font-size:.74rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;line-height:1.3}
-.notice time b{display:block;font-size:1.5rem;color:var(--ink);font-family:var(--display);font-weight:400;letter-spacing:0}
-.notice p{color:var(--muted);font-size:.86rem}
-.notice h4{font-size:.95rem}
-details{border-bottom:1px solid var(--line)}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;font-weight:700;position:relative}
+.two{display:grid;grid-template-columns:1fr 1.25fr;gap:44px}
+.notices{display:grid;gap:12px}
+.notice{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--ground)}
+.notice time{display:grid;place-items:center;align-content:center;background:var(--gold-soft);border-radius:12px;font-size:.7rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;line-height:1.2;height:64px}
+.notice time b{display:block;font-size:1.5rem;color:var(--ink);font-family:"Plus Jakarta Sans",sans-serif;letter-spacing:0}
+.notice p{color:var(--muted);font-size:.86rem;margin-top:2px}
+.notice h4{font-size:.96rem}
+.faq{display:grid;gap:10px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--ground);transition:border-color .2s}
+details[open]{border-color:var(--gold-2);box-shadow:var(--shadow-sm)}
+summary{list-style:none;cursor:pointer;padding:16px 52px 16px 20px;font-weight:700;position:relative;font-family:var(--display)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:6px;top:12px;font-size:1.4rem;color:var(--gold);font-weight:400}
-details[open] summary::after{content:"–"}
-details p{padding:0 0 16px;color:var(--muted);max-width:68ch}
+summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;font-size:1.1rem;font-weight:700}
+details[open] summary::after{content:"–";background:var(--gold);color:var(--on-gold)}
+details p{padding:0 20px 18px;color:var(--muted);max-width:70ch}
+
+/* CTA band */
+.cta{padding-block:0 80px}
+.cta .box{background:var(--gold-grad);border-radius:24px;padding:44px 48px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+.cta .box::after{content:"";position:absolute;right:-80px;bottom:-120px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(255,255,255,.15)}
+.cta h2{color:#2a1c02;font-size:clamp(1.6rem,3vw,2.3rem);max-width:22ch}
+.cta p{color:#4a3510;margin-top:8px;max-width:52ch}
+.cta .acts{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.cta .btn-deep{background:#083a33;color:#f4f8f6}
+.cta .btn-line{color:#2a1c02}
 
 /* fraud strip */
 .fraud{background:var(--gold-soft);border-block:1px solid var(--line)}
-.fraud .wrap{display:flex;gap:16px;align-items:center;padding-block:18px;font-size:.9rem;flex-wrap:wrap}
+.fraud .wrap{display:flex;gap:14px;align-items:center;padding-block:16px;font-size:.88rem}
+.fraud svg{width:22px;height:22px;stroke:var(--alert);fill:none;stroke-width:2;flex-shrink:0}
 .fraud strong{color:var(--alert)}
 
 /* footer */
-footer{background:var(--deep);color:var(--on-deep-muted);font-size:.86rem}
-.f-top{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px;padding-block:52px 36px}
-footer h4{color:var(--on-deep);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer{background:#04201c;color:var(--on-deep-muted);font-size:.86rem;position:relative}
+footer::before{content:"";display:block;height:5px;background:var(--gold-grad)}
+.f-top{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:28px;padding-block:56px 36px}
+footer h4{color:var(--gold-3);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+html[lang="ml"] footer h4{letter-spacing:0;font-size:.88rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 footer a{text-decoration:none}
-footer a:hover{color:var(--on-deep)}
+footer a:hover{color:var(--gold-3)}
 footer .brand-name{color:var(--on-deep)}
-.addr{margin-top:16px;line-height:1.7}
+.addr{margin-top:18px;line-height:1.8}
 .addr .ph{color:var(--on-deep);font-weight:700;user-select:all}
-.reg{border-top:1px solid var(--deep-2);padding-block:22px;font-size:.76rem;line-height:1.7;display:grid;gap:8px}
+.reg{border-top:1px solid rgba(255,255,255,.1);padding-block:22px;font-size:.76rem;line-height:1.75;display:grid;gap:8px}
 .reg b{color:var(--on-deep)}
-.f-bot{border-top:1px solid var(--deep-2);padding-block:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.76rem}
+.f-bot{border-top:1px solid rgba(255,255,255,.1);padding-block:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.76rem}
 
 /* sticky mobile bar */
-.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ground);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));grid-template-columns:repeat(4,1fr);gap:4px}
-.mbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.7rem;font-weight:700;text-decoration:none;padding:4px}
-.mbar a.pri{background:var(--gold);color:var(--on-gold);border-radius:10px}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ground);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));grid-template-columns:repeat(4,1fr);gap:4px;box-shadow:0 -8px 24px -12px rgba(0,0,0,.2)}
+.mbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.7rem;font-weight:700;text-decoration:none;padding:5px}
+.mbar a.pri{background:var(--gold-grad);color:var(--on-gold);border-radius:12px}
 .mbar svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}
 
 /* modal */
-.modal{position:fixed;inset:0;background:rgba(5,20,18,.55);display:grid;place-items:center;z-index:60;padding:20px}
-.modal .box{background:var(--ground);border-radius:var(--radius);padding:28px;max-width:420px;width:100%;border-top:4px solid var(--gold);display:grid;gap:12px}
+.modal{position:fixed;inset:0;background:rgba(4,20,18,.6);backdrop-filter:blur(4px);display:grid;place-items:center;z-index:60;padding:20px}
+.modal .box{background:var(--ground);border-radius:20px;padding:30px;max-width:420px;width:100%;display:grid;gap:12px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.modal .box::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--gold-grad)}
 .modal .box p{color:var(--muted);font-size:.92rem}
 
 /* ---------- responsive ---------- */
-@media (max-width:1120px){
+@media (max-width:1180px){
   nav.primary,.head-cta{display:none}
   .burger{display:block}
-  .tiles .wrap{grid-template-columns:repeat(4,1fr)}
+  .tiles .grid{grid-template-columns:repeat(4,1fr)}
   .branches{grid-template-columns:repeat(2,1fr)}
   .f-top{grid-template-columns:1fr 1fr 1fr}
   .f-top > div:first-child{grid-column:1/-1}
+  .assure .grid{grid-template-columns:1fr 1fr}
+  .as:nth-child(3){border-left:0}
+  .as:nth-child(n+3){border-top:1px solid var(--line)}
 }
-@media (max-width:900px){
-  .hero .wrap,.trust .wrap,.mem,.two{grid-template-columns:1fr}
-  .slides{min-height:360px}
+@media (max-width:1320px){
+  html[lang="ml"] nav.primary,html[lang="ml"] .head-cta{display:none}
+  html[lang="ml"] .burger{display:block}
+}
+@media (max-width:920px){
+  .hero .wrap,.trust .wrap,.mem,.two,.rate-grid{grid-template-columns:1fr}
+  .hero .wrap{padding-block:44px 90px}
   .cards{grid-template-columns:1fr}
   .calc{grid-template-columns:1fr}
   .ctabs{flex-direction:row;overflow-x:auto}
   .ctabs button{white-space:nowrap}
-  .cpanel{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .step:nth-child(2){border-right:0}
-  .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .cpanel{grid-template-columns:1fr;padding:24px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:34px}
+  .steps::before{display:none}
+  .cta .box{padding:34px 28px}
 }
-@media (max-width:620px){
+@media (max-width:640px){
   .slide{grid-template-columns:1fr}
-  .orn{display:none}
-  .slides{min-height:380px}
-  .tiles .wrap{grid-template-columns:repeat(4,1fr);gap:4px}
+  .medal-wrap{display:none}
+  .slides{min-height:420px}
+  html[lang="ml"] .slides{min-height:540px}
+  .tiles .grid{grid-template-columns:repeat(4,1fr);gap:4px}
   .tile{font-size:.72rem;padding:10px 2px}
-  .tile svg{width:28px;height:28px}
-  .branches,.steps{grid-template-columns:1fr}
-  .step{border-right:0;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:0}
+  .tile .ti{width:48px;height:48px}
+  .tile svg{width:24px;height:24px}
+  .assure .grid{grid-template-columns:1fr}
+  .as + .as{border-left:0;border-top:1px solid var(--line)}
+  .branches,.steps,.docs{grid-template-columns:1fr}
   .f-top{grid-template-columns:1fr 1fr}
   .util-right a.hide-s{display:none}
   .mbar{display:grid}
-  body{padding-bottom:70px}
+  body{padding-bottom:72px}
   .row2{grid-template-columns:1fr}
-  section.s{padding-block:52px}
+  section.s{padding-block:56px}
+  .fraud .wrap{align-items:flex-start}
 }
 </style>
+</head>
+<body>
 
 <!-- ============ UTILITY BAR ============ -->
 <div class="util">
@@ -377,13 +493,13 @@ footer .brand-name{color:var(--on-deep)}
       <a href="#branches">Locate a branch</a>
       <a href="#faq" class="hide-s">Help</a>
       <a href="#grievance" class="hide-s">Grievances</a>
-      <button class="lang" id="langBtn" type="button"><span class="ml">മലയാളം</span></button>
+      <button class="lang" id="langBtn" type="button" aria-label="Change language"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span id="langLabel">മലയാളം</span></button>
     </div>
   </div>
 </div>
 
 <!-- ============ HEADER ============ -->
-<header class="main">
+<header class="main" id="hdr">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Home">
       <span class="brand-mark" aria-hidden="true">H</span>
@@ -397,7 +513,7 @@ footer .brand-name{color:var(--on-deep)}
           <a href="#products" data-open="gold"><b>Karshaka Gold</b><span>For Kuttanad paddy farmers</span></a>
           <a href="#calc" data-calc="gold"><b>Gold loan calculator</b><span>How much can my jewellery get?</span></a>
           <a href="#how"><b>How it works</b><span>Pledge, appraise, disburse in 30 min</span></a>
-          <a href="#rates"><b>Today's gold rate</b><span>Per gram, updated every morning</span></a>
+          <a href="#top"><b>Today's gold rate</b><span>Per gram, updated every morning</span></a>
         </div>
       </div>
       <div class="nav-item"><button type="button">Deposits</button>
@@ -436,7 +552,7 @@ footer .brand-name{color:var(--on-deep)}
       </div>
     </nav>
     <div class="head-cta">
-      <button class="btn btn-line" type="button" data-login style="color:var(--deep-2)">Member login</button>
+      <button class="btn btn-outline" type="button" data-login>Member login</button>
       <a class="btn btn-gold" href="#member">Become a member</a>
     </div>
     <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" id="burger"><span></span><span></span><span></span></button>
@@ -460,7 +576,7 @@ footer .brand-name{color:var(--on-deep)}
     <span>24K: <b id="r24">₹ 11,400</b>/g</span>
     <span>18K: <b id="r18">₹ 8,550</b>/g</span>
     <span>Loan per gram (22K): <b id="rLoan">₹ 7,838</b></span>
-    <small id="rDate">Alappuzha · sample rate, update daily</small>
+    <small>Alappuzha · sample rate, update daily</small>
   </div>
 </div>
 
@@ -472,32 +588,36 @@ footer .brand-name{color:var(--on-deep)}
         <div class="slide on">
           <div>
             <span class="eyebrow">Gold Loan · Members only</span>
-            <h1 style="margin-top:10px">Your gold, your cash, <em>in 30 minutes.</em></h1>
+            <h1>Your gold, your cash, <em>in 30 minutes.</em></h1>
             <p>Walk into any of our branches with your jewellery and Aadhaar. We appraise it in front of you, seal it in your presence, and pay out the same visit.</p>
             <div class="big"><strong class="num">9.90%</strong><span>p.a. onwards · Swarna Express</span></div>
-            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="gold">Check how much you'll get</a><a class="btn btn-line" href="#branches">Nearest branch</a></div>
+            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="gold">Check how much you'll get</a><a class="btn btn-ghost" href="#branches">Nearest branch</a></div>
           </div>
-          <div class="orn" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="medal-wrap" aria-hidden="true"><div class="medal"><b>₹</b></div>
+            <span class="chipf a"><i>✓</i><span>Sealed in your presence</span></span>
+            <span class="chipf b"><i>g</i><span id="chipLoan">₹ 7,838</span></span></div>
         </div>
         <div class="slide">
           <div>
             <span class="eyebrow">Fixed Deposit · For private circulation to members</span>
-            <h1 style="margin-top:10px">Savings that grow <em>quietly, every quarter.</em></h1>
+            <h1>Savings that grow <em>quietly, every quarter.</em></h1>
             <p>Fixed deposits from 6 to 60 months, compounded quarterly. Senior-citizen members earn an extra 0.50%.</p>
             <div class="big"><strong class="num">9.25%</strong><span>p.a. · 36 months · senior citizens</span></div>
-            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="fd">Calculate maturity</a><a class="btn btn-line" href="#rates">All rates</a></div>
+            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="fd">Calculate maturity</a><a class="btn btn-ghost" href="#rates">All rates</a></div>
           </div>
-          <div class="orn coin" aria-hidden="true"><i></i><i></i><i>₹</i></div>
+          <div class="medal-wrap" aria-hidden="true"><div class="medal"><b>FD</b></div>
+            <span class="chipf a"><i>+</i><span>Senior citizens +0.50%</span></span></div>
         </div>
         <div class="slide">
           <div>
             <span class="eyebrow">Recurring Deposit · Kuttanad harvest saver</span>
-            <h1 style="margin-top:10px">Set aside a little <em>after every harvest.</em></h1>
+            <h1>Set aside a little <em>after every harvest.</em></h1>
             <p>Start a recurring deposit from ₹500 a month. Pay at the counter or have it collected at your doorstep by our agents.</p>
             <div class="big"><strong class="num">₹500</strong><span>per month to start</span></div>
-            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="rd">Plan my RD</a><a class="btn btn-line" href="#member">Become a member</a></div>
+            <div class="acts"><a class="btn btn-gold" href="#calc" data-calc="rd">Plan my RD</a><a class="btn btn-ghost" href="#member">Become a member</a></div>
           </div>
-          <div class="orn" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="medal-wrap" aria-hidden="true"><div class="medal"><b>RD</b></div>
+            <span class="chipf a"><i>✓</i><span>Collected at your door</span></span></div>
         </div>
       </div>
       <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
@@ -517,25 +637,36 @@ footer .brand-name{color:var(--on-deep)}
         <label class="consent"><input type="checkbox" id="lConsent"> I agree to be contacted by phone or WhatsApp about this request.</label>
         <p id="lErr" class="fine" style="color:var(--alert)" hidden></p>
         <button class="btn btn-deep" type="submit">Request call back</button>
+        <span class="secure"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>Your details are used only to contact you.</span>
       </form>
       <div class="ok-msg" id="leadOk" hidden></div>
     </div>
   </div>
-  <div class="water" aria-hidden="true"></div>
 </section>
-<div class="kasavu" aria-hidden="true"></div>
+
+<!-- ============ ASSURANCE STRIP ============ -->
+<div class="assure">
+  <div class="wrap">
+    <div class="grid">
+      <div class="as"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h4>Registered Nidhi</h4><p>Incorporated under the Companies Act, 2013</p></div></div>
+      <div class="as"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1M12 15v1M16 12h-1M9 12H8"/></svg></span><div><h4>Insured gold vault</h4><p>Your ornaments are insured end to end</p></div></div>
+      <div class="as"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v16M5 8h14M7 8l-3 7h6zM17 8l-3 7h6z"/></svg></span><div><h4>Transparent appraisal</h4><p>Weighed and tested in front of you</p></div></div>
+      <div class="as"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-5h4v5"/></svg></span><div><h4>Doorstep RD collection</h4><p>Agents with company ID cards</p></div></div>
+    </div>
+  </div>
+</div>
 
 <!-- ============ QUICK TILES ============ -->
 <div class="tiles">
-  <div class="wrap">
-    <a class="tile" href="#products" data-open="gold"><svg viewBox="0 0 32 32"><path d="M6 24l4-12h12l4 12z"/><path d="M11 12l2-5h6l2 5"/></svg>Gold Loan</a>
-    <a class="tile" href="#products" data-open="dep"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="16" rx="2"/><path d="M5 13h22M10 19h6"/></svg>Fixed Deposit</a>
-    <a class="tile" href="#products" data-open="dep"><svg viewBox="0 0 32 32"><path d="M8 26V14M14 26V10M20 26V16M26 26V6"/></svg>Recurring Deposit</a>
-    <a class="tile" href="#products" data-open="dep"><svg viewBox="0 0 32 32"><path d="M6 10h20v14H6z"/><path d="M10 6h12v4M16 14v6M13 17h6"/></svg>Savings Account</a>
-    <a class="tile" href="#products" data-open="loan"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M12 13h8M12 17h8M16 17l-3 5"/></svg>Loan on Deposit</a>
-    <a class="tile" href="#products" data-open="loan"><svg viewBox="0 0 32 32"><path d="M5 15L16 6l11 9"/><path d="M8 13v12h16V13"/><path d="M14 25v-6h4v6"/></svg>Property Loan</a>
-    <a class="tile" href="#member"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M7 27c1-6 5-8 9-8s8 2 9 8"/></svg>Become a Member</a>
-    <a class="tile" href="#branches"><svg viewBox="0 0 32 32"><path d="M16 28s9-8 9-15a9 9 0 10-18 0c0 7 9 15 9 15z"/><circle cx="16" cy="13" r="3"/></svg>Locate Branch</a>
+  <div class="wrap grid">
+    <a class="tile" href="#products" data-open="gold"><span class="ti"><svg viewBox="0 0 32 32"><path d="M6 24l4-12h12l4 12z"/><path d="M11 12l2-5h6l2 5"/></svg></span>Gold Loan</a>
+    <a class="tile" href="#products" data-open="dep"><span class="ti"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="16" rx="2"/><path d="M5 13h22M10 19h6"/></svg></span>Fixed Deposit</a>
+    <a class="tile" href="#products" data-open="dep"><span class="ti"><svg viewBox="0 0 32 32"><path d="M8 26V14M14 26V10M20 26V16M26 26V6"/></svg></span>Recurring Deposit</a>
+    <a class="tile" href="#products" data-open="dep"><span class="ti"><svg viewBox="0 0 32 32"><path d="M6 10h20v14H6z"/><path d="M10 6h12v4M16 14v6M13 17h6"/></svg></span>Savings Account</a>
+    <a class="tile" href="#products" data-open="loan"><span class="ti"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M12 13h8M12 17h8M16 17l-3 5"/></svg></span>Loan on Deposit</a>
+    <a class="tile" href="#products" data-open="loan"><span class="ti"><svg viewBox="0 0 32 32"><path d="M5 15L16 6l11 9"/><path d="M8 13v12h16V13"/><path d="M14 25v-6h4v6"/></svg></span>Property Loan</a>
+    <a class="tile" href="#member"><span class="ti"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M7 27c1-6 5-8 9-8s8 2 9 8"/></svg></span>Become a Member</a>
+    <a class="tile" href="#branches"><span class="ti"><svg viewBox="0 0 32 32"><path d="M16 28s9-8 9-15a9 9 0 10-18 0c0 7 9 15 9 15z"/><circle cx="16" cy="13" r="3"/></svg></span>Locate Branch</a>
   </div>
 </div>
 
@@ -553,45 +684,45 @@ footer .brand-name{color:var(--on-deep)}
     </div>
 
     <div class="cards" data-panel="gold">
-      <article class="pcard"><span class="chip">Most popular</span><h3>Swarna Regular</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M6 24l4-12h12l4 12z"/><path d="M11 12l2-5h6l2 5"/></svg></span><span class="chip">Most popular</span></div><h3>Swarna Regular</h3>
         <div class="rate"><strong class="num">12.00%</strong><span>p.a.</span></div>
         <ul><li>Tenure up to 12 months</li><li>Pay interest monthly or at closure</li><li>Part-release of ornaments allowed</li></ul>
         <a class="btn btn-deep" href="#apply">Apply now</a></article>
-      <article class="pcard feat"><span class="chip">Lowest rate</span><h3>Swarna Express</h3>
+      <article class="pcard feat"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M17 4L8 18h7l-1 10 10-15h-7z"/></svg></span><span class="chip">Lowest rate</span></div><h3>Swarna Express</h3>
         <div class="rate"><strong class="num">9.90%</strong><span>p.a. · 3 months</span></div>
         <ul><li>For short cash needs — school fees, hospital, festival</li><li>Rebate if closed within 30 days</li><li>Disbursed in about 30 minutes</li></ul>
         <a class="btn btn-gold" href="#apply">Apply now</a></article>
-      <article class="pcard"><span class="chip">Seasonal</span><h3>Karshaka Gold</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M16 28V12"/><path d="M16 16c-5 0-8-3-8-8 5 0 8 3 8 8zM16 20c5 0 8-3 8-8-5 0-8 3-8 8z"/></svg></span><span class="chip">Seasonal</span></div><h3>Karshaka Gold</h3>
         <div class="rate"><strong class="num">10.50%</strong><span>p.a. · up to 6 months</span></div>
         <ul><li>Timed to the Kuttanad puncha and virippu crop cycles</li><li>Bullet repayment after harvest</li><li>Krishi Bhavan ID gets priority processing</li></ul>
         <a class="btn btn-deep" href="#apply">Apply now</a></article>
     </div>
 
     <div class="cards" data-panel="dep" hidden>
-      <article class="pcard feat"><span class="chip">Quarterly compounding</span><h3>Fixed Deposit</h3>
+      <article class="pcard feat"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="16" rx="2"/><path d="M5 13h22M10 19h6"/></svg></span><span class="chip">Quarterly compounding</span></div><h3>Fixed Deposit</h3>
         <div class="rate"><strong class="num">8.75%</strong><span>p.a. · 36 months</span></div>
         <ul><li>Tenure 6 to 60 months</li><li>+0.50% for members aged 60 and above</li><li>Loan up to 90% against your FD</li></ul>
         <a class="btn btn-gold" href="#calc" data-calc="fd">Calculate returns</a></article>
-      <article class="pcard"><span class="chip">From ₹500 a month</span><h3>Recurring Deposit</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M8 26V14M14 26V10M20 26V16M26 26V6"/></svg></span><span class="chip">From ₹500 a month</span></div><h3>Recurring Deposit</h3>
         <div class="rate"><strong class="num">8.50%</strong><span>p.a. · 12–60 months</span></div>
         <ul><li>Doorstep collection by our agents</li><li>Standing instruction from savings account</li><li>Nomination facility</li></ul>
         <a class="btn btn-deep" href="#calc" data-calc="rd">Plan my RD</a></article>
-      <article class="pcard"><span class="chip">With passbook</span><h3>Savings Account</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M6 10h20v14H6z"/><path d="M10 6h12v4M16 14v6M13 17h6"/></svg></span><span class="chip">With passbook</span></div><h3>Savings Account</h3>
         <div class="rate"><strong class="num">4.00%</strong><span>p.a.</span></div>
         <ul><li>Minimum balance ₹1,000</li><li>Interest credited half-yearly</li><li>Auto-debit for loan interest and RD</li></ul>
         <a class="btn btn-deep" href="#member">Open with membership</a></article>
     </div>
 
     <div class="cards" data-panel="loan" hidden>
-      <article class="pcard"><span class="chip">Instant</span><h3>Loan against Deposit</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M12 13h8M12 17h8M16 17l-3 5"/></svg></span><span class="chip">Instant</span></div><h3>Loan against Deposit</h3>
         <div class="rate"><strong class="num">+2.00%</strong><span>over your FD rate</span></div>
         <ul><li>Up to 90% of the deposit value</li><li>No processing fee</li><li>Your FD keeps earning interest</li></ul>
         <a class="btn btn-deep" href="#apply">Apply now</a></article>
-      <article class="pcard feat"><span class="chip">Long tenure</span><h3>Property Loan</h3>
+      <article class="pcard feat"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M5 15L16 6l11 9"/><path d="M8 13v12h16V13"/><path d="M14 25v-6h4v6"/></svg></span><span class="chip">Long tenure</span></div><h3>Property Loan</h3>
         <div class="rate"><strong class="num">13.50%</strong><span>p.a. onwards</span></div>
         <ul><li>Against residential house or land in Alappuzha district</li><li>Up to 50% of the assessed value</li><li>Tenure up to 7 years, monthly EMI</li></ul>
         <a class="btn btn-gold" href="#calc" data-calc="emi">Check your EMI</a></article>
-      <article class="pcard"><span class="chip">Govt. securities</span><h3>Loan against NSC / KVP</h3>
+      <article class="pcard"><div class="top"><span class="pi"><svg viewBox="0 0 32 32"><path d="M9 4h10l6 6v18H9z"/><path d="M19 4v6h6M13 16h8M13 21h8"/></svg></span><span class="chip">Govt. securities</span></div><h3>Loan against NSC / KVP</h3>
         <div class="rate"><strong class="num">12.00%</strong><span>p.a.</span></div>
         <ul><li>Against NSC, KVP and LIC policies</li><li>Up to 80% of surrender value</li><li>Quick documentation</li></ul>
         <a class="btn btn-deep" href="#apply">Apply now</a></article>
@@ -606,13 +737,23 @@ footer .brand-name{color:var(--on-deep)}
       <div><span class="eyebrow">Deposit interest rates</span><h2>Fixed deposit rates</h2>
         <p>Effective 1 September 2026. Interest is compounded quarterly and can be paid out monthly, quarterly, or at maturity.</p></div>
     </div>
-    <div class="tbl-wrap">
-      <table class="num">
-        <thead><tr><th>Tenure</th><th class="r">Members</th><th class="r">Senior citizen members</th><th class="r">Effective yield*</th></tr></thead>
-        <tbody id="rateBody"></tbody>
-      </table>
+    <div class="rate-grid">
+      <div>
+        <div class="tbl-wrap">
+          <table class="num">
+            <thead><tr><th>Tenure</th><th class="r">Members</th><th class="r">Senior citizen members</th><th class="r">Effective yield*</th></tr></thead>
+            <tbody id="rateBody"></tbody>
+          </table>
+        </div>
+        <p class="circ"><b>For private circulation among members only.</b> Under the Nidhi Rules, 2014 we do not advertise to solicit deposits from the public. *Annualised yield at quarterly compounding for regular members.</p>
+      </div>
+      <aside class="senior">
+        <span class="pct num">+0.50%</span>
+        <h3>Extra for senior citizens</h3>
+        <p>Members aged 60 and above earn an additional 0.50% on every fixed deposit tenure.</p>
+        <a class="btn" href="#calc" data-calc="fd">Calculate maturity</a>
+      </aside>
     </div>
-    <p class="circ"><b>For private circulation among members only.</b> Under the Nidhi Rules, 2014 we do not advertise to solicit deposits from the public. *Annualised yield at quarterly compounding for regular members.</p>
   </div>
 </section>
 
@@ -622,13 +763,12 @@ footer .brand-name{color:var(--on-deep)}
     <div class="s-head"><div><span class="eyebrow">Plan before you visit</span><h2>Calculators</h2></div></div>
     <div class="calc">
       <div class="ctabs" role="tablist" aria-label="Calculators">
-        <button role="tab" aria-selected="true" data-c="gold">Gold loan eligibility</button>
-        <button role="tab" aria-selected="false" data-c="fd">Fixed deposit</button>
-        <button role="tab" aria-selected="false" data-c="rd">Recurring deposit</button>
-        <button role="tab" aria-selected="false" data-c="emi">Loan EMI</button>
+        <button role="tab" aria-selected="true" data-c="gold"><svg viewBox="0 0 24 24"><path d="M4 18l3-9h10l3 9z"/><path d="M8 9l2-4h4l2 4"/></svg>Gold loan eligibility</button>
+        <button role="tab" aria-selected="false" data-c="fd"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>Fixed deposit</button>
+        <button role="tab" aria-selected="false" data-c="rd"><svg viewBox="0 0 24 24"><path d="M6 20v-8M11 20V8M16 20v-6M21 20V4"/></svg>Recurring deposit</button>
+        <button role="tab" aria-selected="false" data-c="emi"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2"/></svg>Loan EMI</button>
       </div>
 
-      <!-- gold -->
       <div class="cpanel" data-cp="gold">
         <div>
           <div class="sl"><div class="top"><label for="gW">Gold weight</label><output id="gWo"></output></div>
@@ -642,10 +782,10 @@ footer .brand-name{color:var(--on-deep)}
         <div class="result">
           <span class="hl">You can get up to</span><span class="hv" id="gOut">—</span>
           <dl><dt>Gold value</dt><dd id="gVal"></dd><dt>Loan-to-value</dt><dd>75%</dd><dt>Interest rate</dt><dd id="gRate"></dd><dt>Interest for full tenure</dt><dd id="gInt"></dd></dl>
+          <a class="btn btn-gold" href="#apply">Apply now</a>
         </div>
       </div>
 
-      <!-- fd -->
       <div class="cpanel" data-cp="fd" hidden>
         <div>
           <div class="sl"><div class="top"><label for="fP">Deposit amount</label><output id="fPo"></output></div>
@@ -663,7 +803,6 @@ footer .brand-name{color:var(--on-deep)}
         </div>
       </div>
 
-      <!-- rd -->
       <div class="cpanel" data-cp="rd" hidden>
         <div>
           <div class="sl"><div class="top"><label for="rM">Monthly instalment</label><output id="rMo"></output></div>
@@ -680,7 +819,6 @@ footer .brand-name{color:var(--on-deep)}
         </div>
       </div>
 
-      <!-- emi -->
       <div class="cpanel" data-cp="emi" hidden>
         <div>
           <div class="sl"><div class="top"><label for="eP">Loan amount</label><output id="ePo"></output></div>
@@ -719,15 +857,15 @@ footer .brand-name{color:var(--on-deep)}
   <div class="wrap">
     <div>
       <span class="eyebrow">A mutual benefit company</span>
-      <h2 style="margin-top:8px">Owned by the people it serves</h2>
+      <h2>Owned by the people it serves</h2>
       <p>A Nidhi is a company whose members save and borrow among themselves. Every depositor and borrower is a shareholder. The money raised in Alappuzha stays in Alappuzha and is lent back to the fishermen, coir workers, farmers, traders and families who put it there.</p>
       <p>We are incorporated under the Companies Act, 2013, and file our half-yearly returns with the Ministry of Corporate Affairs.</p>
     </div>
     <div>
       <div class="stats">
-        <div class="stat"><strong class="num" data-count="8">8</strong><span>branches in Alappuzha district</span></div>
+        <div class="stat"><strong class="num">8</strong><span>branches in Alappuzha district</span></div>
         <div class="stat"><strong class="num">30 min</strong><span>typical gold loan turnaround</span></div>
-        <div class="stat"><strong class="num" data-count="12000">12,000+</strong><span>shareholding members</span></div>
+        <div class="stat"><strong class="num">12,000+</strong><span>shareholding members</span></div>
         <div class="stat"><strong class="num">6 days</strong><span>a week, 9:30 am to 5:30 pm</span></div>
       </div>
       <p class="sample-note">Figures are placeholders — replace with your actual numbers before launch.</p>
@@ -742,10 +880,10 @@ footer .brand-name{color:var(--on-deep)}
       <p>Our loans and deposits are open only to members, so every relationship begins with one share.</p></div></div>
     <div class="mem">
       <div class="docs">
-        <div class="doc"><span class="ic">1</span><div><h4>Aadhaar card</h4><p>Original for verification, plus one self-attested copy.</p></div></div>
-        <div class="doc"><span class="ic">2</span><div><h4>PAN card or Form 60</h4><p>Required for deposits of ₹50,000 and above.</p></div></div>
-        <div class="doc"><span class="ic">3</span><div><h4>Two passport-size photographs</h4><p>Recent colour photos. We can take one at the branch.</p></div></div>
-        <div class="doc"><span class="ic">4</span><div><h4>Address proof, if different from Aadhaar</h4><p>Electricity bill, ration card or voter ID.</p></div></div>
+        <div class="doc"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg></span><h4>Aadhaar card</h4><p>Original for verification, plus one self-attested copy.</p></div>
+        <div class="doc"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h10"/></svg></span><h4>PAN card or Form 60</h4><p>Required for deposits of ₹50,000 and above.</p></div>
+        <div class="doc"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 18c1-2 2.5-3 4-3s3 1 4 3"/></svg></span><h4>Two passport-size photographs</h4><p>Recent colour photos. We can take one at the branch.</p></div>
+        <div class="doc"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg></span><h4>Address proof, if different from Aadhaar</h4><p>Electricity bill, ration card or voter ID.</p></div>
       </div>
       <div class="share">
         <span class="eyebrow">One equity share</span>
@@ -768,7 +906,7 @@ footer .brand-name{color:var(--on-deep)}
     <div class="s-head"><div><span class="eyebrow">Branch locator</span><h2>Find us near you</h2>
       <p>Monday to Saturday, 9:30 am to 5:30 pm. Closed on Sundays, second Saturdays and public holidays.</p></div></div>
     <div class="bfilter">
-      <input id="bq" type="search" placeholder="Search town, taluk or PIN" aria-label="Search branches">
+      <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="bq" type="search" placeholder="Search town, taluk or PIN" aria-label="Search branches"></div>
       <div class="seg" id="bTaluk"></div>
     </div>
     <div class="branches" id="blist"></div>
@@ -790,12 +928,25 @@ footer .brand-name{color:var(--on-deep)}
     </div>
     <div id="faq">
       <div class="s-head"><div><span class="eyebrow">Help</span><h2>Frequently asked questions</h2></div></div>
-      <details open><summary>What is a Nidhi company?</summary><p>A Nidhi is a company incorporated under the Companies Act, 2013 and governed by the Nidhi Rules, 2014. It exists to build saving habits among its members and lends only to them. It is regulated by the Ministry of Corporate Affairs.</p></details>
-      <details><summary>Can anyone deposit money with you?</summary><p>No. We accept deposits and give loans only to our members. You become a member by buying one equity share of ₹10 with your KYC documents — it takes about ten minutes at any branch.</p></details>
-      <details><summary>How much can I get for my gold?</summary><p>Up to 75% of the market value of the net gold content. Use the gold loan calculator above for an estimate; the branch appraiser confirms the final figure after testing.</p></details>
-      <details><summary>Is my gold safe with you?</summary><p>Your ornaments are sealed in a pouch you sign, stored in a burglary-resistant strong room, and covered by insurance for the whole loan period.</p></details>
-      <details><summary>What happens if I can't repay on time?</summary><p>Talk to your branch before the due date — you can pay the interest and renew. If a loan stays overdue we send written notices before any auction, and any surplus from an auction is returned to you.</p></details>
-      <details><summary>Are my deposits insured by DICGC?</summary><p>No. Deposit insurance by DICGC applies only to banks. Nidhi deposits are not covered, which is one reason we keep lending secured against gold, property and deposits.</p></details>
+      <div class="faq">
+        <details open><summary>What is a Nidhi company?</summary><p>A Nidhi is a company incorporated under the Companies Act, 2013 and governed by the Nidhi Rules, 2014. It exists to build saving habits among its members and lends only to them. It is regulated by the Ministry of Corporate Affairs.</p></details>
+        <details><summary>Can anyone deposit money with you?</summary><p>No. We accept deposits and give loans only to our members. You become a member by buying one equity share of ₹10 with your KYC documents — it takes about ten minutes at any branch.</p></details>
+        <details><summary>How much can I get for my gold?</summary><p>Up to 75% of the market value of the net gold content. Use the gold loan calculator above for an estimate; the branch appraiser confirms the final figure after testing.</p></details>
+        <details><summary>Is my gold safe with you?</summary><p>Your ornaments are sealed in a pouch you sign, stored in a burglary-resistant strong room, and covered by insurance for the whole loan period.</p></details>
+        <details><summary>What happens if I can't repay on time?</summary><p>Talk to your branch before the due date — you can pay the interest and renew. If a loan stays overdue we send written notices before any auction, and any surplus from an auction is returned to you.</p></details>
+        <details><summary>Are my deposits insured by DICGC?</summary><p>No. Deposit insurance by DICGC applies only to banks. Nidhi deposits are not covered, which is one reason we keep lending secured against gold, property and deposits.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="wrap">
+    <div class="box">
+      <div><h2>Walk in with gold. Walk out with cash.</h2>
+        <p>Visit any of our 8 branches in Alappuzha district, Monday to Saturday.</p></div>
+      <div class="acts"><a class="btn btn-deep" href="#branches">Find a branch</a><a class="btn btn-line" href="#apply">Request call back</a></div>
     </div>
   </div>
 </section>
@@ -803,8 +954,8 @@ footer .brand-name{color:var(--on-deep)}
 <!-- ============ FRAUD STRIP ============ -->
 <div class="fraud">
   <div class="wrap">
-    <strong>Stay alert:</strong>
-    <span>Our staff will never ask for your OTP, PIN or password. We don't collect cash outside our branches except through ID-carrying RD agents. Report suspicious calls to the branch manager.</span>
+    <svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>
+    <p><strong>Stay alert:</strong> <span>Our staff will never ask for your OTP, PIN or password. We don't collect cash outside our branches except through ID-carrying RD agents. Report suspicious calls to the branch manager.</span></p>
   </div>
 </div>
 
@@ -814,9 +965,9 @@ footer .brand-name{color:var(--on-deep)}
     <div class="f-top">
       <div>
         <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">H</span><span class="brand-name" data-co>Harithapuram Nidhi Private Limited</span></a>
-        <p class="addr">Registered office: [Building name], Mullakkal, Alappuzha – 688 011, Kerala<br>
-          Phone: <span class="ph">0477 000 0000</span><br>
-          Email: <span class="ph">care@harithapuramnidhi.in (placeholder)</span></p>
+        <p class="addr"><span>Registered office: [Building name], Mullakkal, Alappuzha – 688 011, Kerala</span><br>
+          <span>Phone:</span> <span class="ph">0477 000 0000</span><br>
+          <span>Email:</span> <span class="ph">care@harithapuramnidhi.in</span></p>
       </div>
       <div><h4>Gold Loan</h4><ul><li><a href="#products">Swarna Regular</a></li><li><a href="#products">Swarna Express</a></li><li><a href="#products">Karshaka Gold</a></li><li><a href="#calc">Gold loan calculator</a></li></ul></div>
       <div><h4>Deposits</h4><ul><li><a href="#products">Fixed Deposit</a></li><li><a href="#products">Recurring Deposit</a></li><li><a href="#products">Savings Account</a></li><li><a href="#rates">Interest rates</a></li></ul></div>
@@ -824,19 +975,18 @@ footer .brand-name{color:var(--on-deep)}
       <div id="grievance"><h4>Grievances</h4><ul><li>Nodal officer: [Name]</li><li><span class="ph">0477 000 0001</span></li><li>Reply within 7 working days</li><li>Escalation: Registrar of Companies, Kerala</li></ul></div>
     </div>
     <div class="reg">
-      <p><b data-co>Harithapuram Nidhi Private Limited</b> · CIN: U65990KL2026PLN000000 · Incorporated under the Companies Act, 2013 and declared a Nidhi under Section 406 of the Act, governed by the Nidhi Rules, 2014 (as amended).</p>
+      <p><b data-co>Harithapuram Nidhi Private Limited</b> <span>· CIN: U65990KL2026PLN000000 · Incorporated under the Companies Act, 2013 and declared a Nidhi under Section 406 of the Act, governed by the Nidhi Rules, 2014 (as amended).</span></p>
       <p>We deal only with our members. We are not a bank and not an RBI-registered NBFC; deposits are not insured by DICGC. Deposit rate information is for private circulation among members only. We do not run chit funds, issue cheque books or offer insurance or investment products.</p>
     </div>
-    <div class="f-bot"><span>© 2026 <span data-co>Harithapuram Nidhi Private Limited</span>. All rights reserved.</span><span>Privacy policy · Terms of use · Fair practices code</span></div>
+    <div class="f-bot"><span>© 2026 <span data-co>Harithapuram Nidhi Private Limited</span><span>. All rights reserved.</span></span><span>Privacy policy · Terms of use · Fair practices code</span></div>
   </div>
 </footer>
 
-<!-- sticky mobile action bar -->
 <nav class="mbar" aria-label="Quick actions">
-  <a href="#calc"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2"/></svg>Calculate</a>
-  <a href="#rates"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg>Rates</a>
-  <a href="#branches"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Branches</a>
-  <a href="#apply" class="pri"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Apply</a>
+  <a href="#calc"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2"/></svg><span>Calculate</span></a>
+  <a href="#rates"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg><span>Rates</span></a>
+  <a href="#branches"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Branches</span></a>
+  <a href="#apply" class="pri"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Apply</span></a>
 </nav>
 
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
@@ -852,6 +1002,7 @@ footer .brand-name{color:var(--on-deep)}
 /* ---- edit these in one place ---- */
 const CONFIG = {
   company: "Harithapuram Nidhi Private Limited",
+  companyMl: "ഹരിതപുരം നിധി പ്രൈവറ്റ് ലിമിറ്റഡ്",
   gold22PerGram: 10450,   // update every morning
   ltv: 0.75,
   fdRates: [ // [months, regular %, senior %]
@@ -869,20 +1020,342 @@ const CONFIG = {
     {n:"Ramankary", t:"Kuttanad", a:"AC Road, Ramankary, Kuttanad", pin:"689595", ph:"0477 000 0003"}
   ]
 };
-
+</script>
+<script>
+window.ML_TEXT = {
+"Gold Loan":"സ്വർണ്ണ വായ്പ",
+"Deposits":"നിക്ഷേപങ്ങൾ",
+"Other Loans":"മറ്റ് വായ്പകൾ",
+"NRI Members":"പ്രവാസി അംഗങ്ങൾ",
+"Locate a branch":"ശാഖ കണ്ടെത്തുക",
+"Help":"സഹായം",
+"Grievances":"പരാതികൾ",
+"Harithapuram Nidhi Private Limited":"ഹരിതപുരം നിധി പ്രൈവറ്റ് ലിമിറ്റഡ്",
+"Alappuzha · Est. 2026":"ആലപ്പുഴ · സ്ഥാപിതം 2026",
+"Swarna Regular":"സ്വർണ്ണ റെഗുലർ",
+"Standard gold loan, up to 12 months":"സാധാരണ സ്വർണ്ണ വായ്പ, 12 മാസം വരെ",
+"Swarna Express":"സ്വർണ്ണ എക്സ്പ്രസ്",
+"Short-term, low rate, 3 months":"ഹ്രസ്വകാലം, കുറഞ്ഞ പലിശ, 3 മാസം",
+"Karshaka Gold":"കർഷക ഗോൾഡ്",
+"For Kuttanad paddy farmers":"കുട്ടനാട്ടിലെ നെൽകർഷകർക്ക്",
+"Gold loan calculator":"സ്വർണ്ണ വായ്പ കാൽക്കുലേറ്റർ",
+"How much can my jewellery get?":"എന്റെ ആഭരണത്തിന് എത്ര കിട്ടും?",
+"How it works":"എങ്ങനെ പ്രവർത്തിക്കുന്നു",
+"Pledge, appraise, disburse in 30 min":"പണയം, മൂല്യനിർണ്ണയം, 30 മിനിറ്റിൽ തുക",
+"Today's gold rate":"ഇന്നത്തെ സ്വർണ്ണ വില",
+"Per gram, updated every morning":"ഗ്രാമിന്, എല്ലാ ദിവസവും രാവിലെ പുതുക്കുന്നു",
+"Fixed Deposit":"സ്ഥിര നിക്ഷേപം",
+"6 to 60 months":"6 മുതൽ 60 മാസം വരെ",
+"Recurring Deposit":"ആവർത്തന നിക്ഷേപം",
+"Save monthly, 12 to 60 months":"മാസംതോറും സമ്പാദിക്കാം, 12 മുതൽ 60 മാസം വരെ",
+"Savings Account":"സേവിംഗ്സ് അക്കൗണ്ട്",
+"For members, with passbook":"അംഗങ്ങൾക്ക്, പാസ്ബുക്കോടെ",
+"Interest rates":"പലിശ നിരക്കുകൾ",
+"Regular and senior citizen":"സാധാരണ, മുതിർന്ന പൗരന്മാർ",
+"FD calculator":"FD കാൽക്കുലേറ്റർ",
+"Maturity value in seconds":"കാലാവധി തുക നിമിഷങ്ങൾക്കകം",
+"RD calculator":"RD കാൽക്കുലേറ്റർ",
+"Plan a monthly saving":"മാസ സമ്പാദ്യം ആസൂത്രണം ചെയ്യുക",
+"Loans":"വായ്പകൾ",
+"Loan against Deposit":"നിക്ഷേപ ഈടിൽ വായ്പ",
+"Up to 90% of your FD":"നിങ്ങളുടെ FD-യുടെ 90% വരെ",
+"Property Loan":"വസ്തു ഈട് വായ്പ",
+"Against house or land":"വീടോ ഭൂമിയോ ഈടായി",
+"Loan against NSC / KVP":"NSC / KVP ഈടിൽ വായ്പ",
+"Against govt. savings certificates":"സർക്കാർ സമ്പാദ്യ സർട്ടിഫിക്കറ്റുകൾ ഈടായി",
+"EMI calculator":"EMI കാൽക്കുലേറ്റർ",
+"Plan your repayments":"തിരിച്ചടവ് ആസൂത്രണം ചെയ്യുക",
+"Membership":"അംഗത്വം",
+"Become a member":"അംഗമാകുക",
+"One share, ₹10, with KYC":"ഒരു ഓഹരി, ₹10, KYC സഹിതം",
+"Documents needed":"ആവശ്യമായ രേഖകൾ",
+"Aadhaar, PAN, photo":"ആധാർ, പാൻ, ഫോട്ടോ",
+"What is a Nidhi?":"എന്താണ് നിധി?",
+"How we're regulated":"ഞങ്ങളുടെ നിയന്ത്രണ സംവിധാനം",
+"Notices & AGM":"അറിയിപ്പുകളും വാർഷിക പൊതുയോഗവും",
+"For shareholding members":"ഓഹരി ഉടമകളായ അംഗങ്ങൾക്ക്",
+"About":"ഞങ്ങളെക്കുറിച്ച്",
+"About us":"ഞങ്ങളെക്കുറിച്ച്",
+"A mutual benefit society":"ഒരു പരസ്പര സഹായ സ്ഥാപനം",
+"Branches":"ശാഖകൾ",
+"Across Alappuzha district":"ആലപ്പുഴ ജില്ലയിലുടനീളം",
+"Grievance redressal":"പരാതി പരിഹാരം",
+"Nodal officer contact":"നോഡൽ ഓഫീസറുടെ വിവരങ്ങൾ",
+"Disclosures":"വെളിപ്പെടുത്തലുകൾ",
+"Financials, NDH returns":"സാമ്പത്തിക റിപ്പോർട്ടുകൾ, NDH റിട്ടേണുകൾ",
+"Member login":"അംഗ ലോഗിൻ",
+"Gold Loan & Deposits":"സ്വർണ്ണ വായ്പയും നിക്ഷേപങ്ങളും",
+"Calculators":"കാൽക്കുലേറ്ററുകൾ",
+"FAQ":"പതിവ് ചോദ്യങ്ങൾ",
+"Gold rate today":"ഇന്നത്തെ സ്വർണ്ണ വില",
+"Loan per gram (22K):":"ഗ്രാമിന് വായ്പ (22K):",
+"Alappuzha · sample rate, update daily":"ആലപ്പുഴ · മാതൃകാ നിരക്ക്, ദിവസവും പുതുക്കുക",
+"Gold Loan · Members only":"സ്വർണ്ണ വായ്പ · അംഗങ്ങൾക്ക് മാത്രം",
+"Your gold, your cash,":"നിങ്ങളുടെ സ്വർണ്ണം, നിങ്ങളുടെ പണം,",
+"in 30 minutes.":"30 മിനിറ്റിനുള്ളിൽ.",
+"Walk into any of our branches with your jewellery and Aadhaar. We appraise it in front of you, seal it in your presence, and pay out the same visit.":"നിങ്ങളുടെ ആഭരണങ്ങളും ആധാറുമായി ഞങ്ങളുടെ ഏത് ശാഖയിലും വരൂ. നിങ്ങളുടെ മുന്നിൽ വെച്ചുതന്നെ മൂല്യനിർണ്ണയം നടത്തി, നിങ്ങളുടെ സാന്നിധ്യത്തിൽ സീൽ ചെയ്ത്, അതേ സന്ദർശനത്തിൽ തുക നൽകുന്നു.",
+"p.a. onwards · Swarna Express":"വാർഷിക പലിശ മുതൽ · സ്വർണ്ണ എക്സ്പ്രസ്",
+"Check how much you'll get":"എത്ര കിട്ടുമെന്ന് നോക്കൂ",
+"Nearest branch":"അടുത്തുള്ള ശാഖ",
+"Sealed in your presence":"നിങ്ങളുടെ സാന്നിധ്യത്തിൽ സീൽ ചെയ്യുന്നു",
+"Fixed Deposit · For private circulation to members":"സ്ഥിര നിക്ഷേപം · അംഗങ്ങൾക്കിടയിൽ മാത്രം",
+"Savings that grow":"ഓരോ പാദത്തിലും നിശ്ശബ്ദമായി",
+"quietly, every quarter.":"വളരുന്ന സമ്പാദ്യം.",
+"Fixed deposits from 6 to 60 months, compounded quarterly. Senior-citizen members earn an extra 0.50%.":"6 മുതൽ 60 മാസം വരെയുള്ള സ്ഥിര നിക്ഷേപങ്ങൾ, പാദവാർഷിക കൂട്ടുപലിശയോടെ. മുതിർന്ന പൗരന്മാരായ അംഗങ്ങൾക്ക് 0.50% അധികം.",
+"p.a. · 36 months · senior citizens":"വാർഷികം · 36 മാസം · മുതിർന്ന പൗരന്മാർ",
+"Calculate maturity":"കാലാവധി തുക കണക്കാക്കുക",
+"All rates":"എല്ലാ നിരക്കുകളും",
+"Senior citizens +0.50%":"മുതിർന്ന പൗരന്മാർക്ക് +0.50%",
+"Recurring Deposit · Kuttanad harvest saver":"ആവർത്തന നിക്ഷേപം · കുട്ടനാട് കൊയ്ത്ത് സമ്പാദ്യം",
+"Set aside a little":"ഓരോ കൊയ്ത്തിനു ശേഷവും",
+"after every harvest.":"അല്പം മാറ്റിവെക്കൂ.",
+"Start a recurring deposit from ₹500 a month. Pay at the counter or have it collected at your doorstep by our agents.":"മാസം ₹500 മുതൽ ആവർത്തന നിക്ഷേപം തുടങ്ങാം. കൗണ്ടറിൽ അടയ്ക്കാം, അല്ലെങ്കിൽ ഞങ്ങളുടെ ഏജന്റുമാർ വീട്ടുപടിക്കൽ വന്ന് ശേഖരിക്കും.",
+"per month to start":"പ്രതിമാസം, തുടങ്ങാൻ",
+"Plan my RD":"എന്റെ RD ആസൂത്രണം ചെയ്യുക",
+"Collected at your door":"വീട്ടുപടിക്കൽ ശേഖരണം",
+"Request a call back":"തിരികെ വിളിക്കാൻ അഭ്യർത്ഥിക്കുക",
+"Our branch will call you within one working day.":"ഒരു പ്രവൃത്തി ദിവസത്തിനകം ഞങ്ങളുടെ ശാഖ നിങ്ങളെ വിളിക്കും.",
+"Full name":"പൂർണ്ണ പേര്",
+"Mobile number":"മൊബൈൽ നമ്പർ",
+"Interested in":"താൽപ്പര്യമുള്ള സേവനം",
+"Preferred branch":"ഇഷ്ടമുള്ള ശാഖ",
+"I agree to be contacted by phone or WhatsApp about this request.":"ഈ അഭ്യർത്ഥനയെക്കുറിച്ച് ഫോണിലോ വാട്ട്സ്ആപ്പിലോ ബന്ധപ്പെടാൻ ഞാൻ സമ്മതിക്കുന്നു.",
+"Request call back":"തിരികെ വിളിക്കാൻ അഭ്യർത്ഥിക്കുക",
+"Your details are used only to contact you.":"നിങ്ങളുടെ വിവരങ്ങൾ നിങ്ങളെ ബന്ധപ്പെടാൻ മാത്രം ഉപയോഗിക്കുന്നു.",
+"Registered Nidhi":"രജിസ്റ്റേർഡ് നിധി",
+"Incorporated under the Companies Act, 2013":"കമ്പനീസ് ആക്ട്, 2013 പ്രകാരം രൂപീകരിച്ചത്",
+"Insured gold vault":"ഇൻഷുർ ചെയ്ത സ്വർണ്ണ നിലവറ",
+"Your ornaments are insured end to end":"നിങ്ങളുടെ ആഭരണങ്ങൾക്ക് പൂർണ്ണ ഇൻഷുറൻസ്",
+"Transparent appraisal":"സുതാര്യമായ മൂല്യനിർണ്ണയം",
+"Weighed and tested in front of you":"നിങ്ങളുടെ മുന്നിൽ തൂക്കി പരിശോധിക്കുന്നു",
+"Doorstep RD collection":"വീട്ടുപടിക്കൽ RD ശേഖരണം",
+"Agents with company ID cards":"കമ്പനി ഐഡി കാർഡുള്ള ഏജന്റുമാർ",
+"Loan on Deposit":"നിക്ഷേപ വായ്പ",
+"Become a Member":"അംഗമാകുക",
+"Locate Branch":"ശാഖ കണ്ടെത്തുക",
+"What we offer our members":"ഞങ്ങൾ അംഗങ്ങൾക്ക് നൽകുന്നത്",
+"Built for Alappuzha households":"ആലപ്പുഴയിലെ കുടുംബങ്ങൾക്കായി",
+"As a Nidhi company we lend and take deposits only from our own members — the same people who own the company.":"ഒരു നിധി കമ്പനി എന്ന നിലയിൽ ഞങ്ങൾ വായ്പ നൽകുന്നതും നിക്ഷേപം സ്വീകരിക്കുന്നതും ഞങ്ങളുടെ അംഗങ്ങളിൽ നിന്ന് മാത്രമാണ് — കമ്പനിയുടെ ഉടമകളായ അതേ ആളുകളിൽ നിന്ന്.",
+"Most popular":"ഏറ്റവും ജനപ്രിയം",
+"Tenure up to 12 months":"കാലാവധി 12 മാസം വരെ",
+"Pay interest monthly or at closure":"പലിശ മാസംതോറുമോ അവസാനിപ്പിക്കുമ്പോഴോ അടയ്ക്കാം",
+"Part-release of ornaments allowed":"ആഭരണങ്ങൾ ഭാഗികമായി തിരിച്ചെടുക്കാം",
+"Apply now":"ഇപ്പോൾ അപേക്ഷിക്കുക",
+"Lowest rate":"കുറഞ്ഞ നിരക്ക്",
+"p.a. · 3 months":"വാർഷികം · 3 മാസം",
+"For short cash needs — school fees, hospital, festival":"ചെറിയ ആവശ്യങ്ങൾക്ക് — സ്കൂൾ ഫീസ്, ആശുപത്രി, ഉത്സവം",
+"Rebate if closed within 30 days":"30 ദിവസത്തിനകം അടച്ചാൽ ഇളവ്",
+"Disbursed in about 30 minutes":"ഏകദേശം 30 മിനിറ്റിൽ തുക",
+"Seasonal":"സീസണൽ",
+"p.a. · up to 6 months":"വാർഷികം · 6 മാസം വരെ",
+"Timed to the Kuttanad puncha and virippu crop cycles":"കുട്ടനാട്ടിലെ പുഞ്ച, വിരിപ്പ് കൃഷികാലങ്ങൾക്കനുസരിച്ച്",
+"Bullet repayment after harvest":"കൊയ്ത്തിനു ശേഷം ഒറ്റത്തവണ തിരിച്ചടവ്",
+"Krishi Bhavan ID gets priority processing":"കൃഷിഭവൻ ഐഡി ഉള്ളവർക്ക് മുൻഗണന",
+"Quarterly compounding":"പാദവാർഷിക കൂട്ടുപലിശ",
+"p.a. · 36 months":"വാർഷികം · 36 മാസം",
+"Tenure 6 to 60 months":"കാലാവധി 6 മുതൽ 60 മാസം വരെ",
+"+0.50% for members aged 60 and above":"60 വയസ്സും അതിനു മുകളിലുമുള്ള അംഗങ്ങൾക്ക് +0.50%",
+"Loan up to 90% against your FD":"FD-യുടെ 90% വരെ വായ്പ",
+"Calculate returns":"ആദായം കണക്കാക്കുക",
+"From ₹500 a month":"മാസം ₹500 മുതൽ",
+"p.a. · 12–60 months":"വാർഷികം · 12–60 മാസം",
+"Doorstep collection by our agents":"ഏജന്റുമാർ വീട്ടിലെത്തി ശേഖരിക്കും",
+"Standing instruction from savings account":"സേവിംഗ്സ് അക്കൗണ്ടിൽ നിന്ന് സ്വയമേവ അടവ്",
+"Nomination facility":"നോമിനേഷൻ സൗകര്യം",
+"With passbook":"പാസ്ബുക്കോടെ",
+"p.a.":"വാർഷികം",
+"Minimum balance ₹1,000":"കുറഞ്ഞ ബാലൻസ് ₹1,000",
+"Interest credited half-yearly":"പലിശ അർദ്ധവാർഷികമായി നൽകുന്നു",
+"Auto-debit for loan interest and RD":"വായ്പാ പലിശയ്ക്കും RD-ക്കും ഓട്ടോ-ഡെബിറ്റ്",
+"Open with membership":"അംഗത്വത്തോടൊപ്പം തുറക്കുക",
+"Instant":"ഉടനടി",
+"over your FD rate":"FD നിരക്കിനേക്കാൾ അധികം",
+"Up to 90% of the deposit value":"നിക്ഷേപ തുകയുടെ 90% വരെ",
+"No processing fee":"പ്രോസസ്സിംഗ് ഫീസ് ഇല്ല",
+"Your FD keeps earning interest":"നിങ്ങളുടെ FD-ക്ക് പലിശ തുടർന്നും ലഭിക്കും",
+"Long tenure":"ദീർഘ കാലാവധി",
+"p.a. onwards":"വാർഷികം മുതൽ",
+"Against residential house or land in Alappuzha district":"ആലപ്പുഴ ജില്ലയിലെ വീടോ ഭൂമിയോ ഈടായി",
+"Up to 50% of the assessed value":"നിർണ്ണയിച്ച മൂല്യത്തിന്റെ 50% വരെ",
+"Tenure up to 7 years, monthly EMI":"7 വർഷം വരെ കാലാവധി, പ്രതിമാസ EMI",
+"Check your EMI":"EMI പരിശോധിക്കുക",
+"Govt. securities":"സർക്കാർ സെക്യൂരിറ്റികൾ",
+"Against NSC, KVP and LIC policies":"NSC, KVP, LIC പോളിസികൾ ഈടായി",
+"Up to 80% of surrender value":"സറണ്ടർ മൂല്യത്തിന്റെ 80% വരെ",
+"Quick documentation":"ലളിതമായ രേഖാ നടപടികൾ",
+"Deposit interest rates":"നിക്ഷേപ പലിശ നിരക്കുകൾ",
+"Fixed deposit rates":"സ്ഥിര നിക്ഷേപ നിരക്കുകൾ",
+"Effective 1 September 2026. Interest is compounded quarterly and can be paid out monthly, quarterly, or at maturity.":"2026 സെപ്റ്റംബർ 1 മുതൽ പ്രാബല്യത്തിൽ. പലിശ പാദവാർഷിക കൂട്ടുപലിശയായി കണക്കാക്കുന്നു; മാസംതോറും, പാദംതോറും, അല്ലെങ്കിൽ കാലാവധി പൂർത്തിയാകുമ്പോൾ വാങ്ങാം.",
+"Tenure":"കാലാവധി",
+"Members":"അംഗങ്ങൾ",
+"Senior citizen members":"മുതിർന്ന പൗരന്മാരായ അംഗങ്ങൾ",
+"Effective yield*":"യഥാർത്ഥ ആദായം*",
+"For private circulation among members only.":"അംഗങ്ങൾക്കിടയിൽ മാത്രം പ്രചരിപ്പിക്കാനുള്ളത്.",
+"Under the Nidhi Rules, 2014 we do not advertise to solicit deposits from the public. *Annualised yield at quarterly compounding for regular members.":"നിധി ചട്ടങ്ങൾ, 2014 പ്രകാരം പൊതുജനങ്ങളിൽ നിന്ന് നിക്ഷേപം ആകർഷിക്കാൻ ഞങ്ങൾ പരസ്യം ചെയ്യുന്നില്ല. *സാധാരണ അംഗങ്ങൾക്ക് പാദവാർഷിക കൂട്ടുപലിശയിലുള്ള വാർഷിക ആദായം.",
+"Extra for senior citizens":"മുതിർന്ന പൗരന്മാർക്ക് അധിക പലിശ",
+"Members aged 60 and above earn an additional 0.50% on every fixed deposit tenure.":"60 വയസ്സും അതിനു മുകളിലുമുള്ള അംഗങ്ങൾക്ക് എല്ലാ സ്ഥിര നിക്ഷേപ കാലാവധികളിലും 0.50% അധിക പലിശ.",
+"Plan before you visit":"വരുന്നതിനു മുമ്പ് കണക്കാക്കൂ",
+"Gold loan eligibility":"സ്വർണ്ണ വായ്പാ യോഗ്യത",
+"Fixed deposit":"സ്ഥിര നിക്ഷേപം",
+"Recurring deposit":"ആവർത്തന നിക്ഷേപം",
+"Loan EMI":"വായ്പാ EMI",
+"Gold weight":"സ്വർണ്ണത്തിന്റെ തൂക്കം",
+"Purity":"പരിശുദ്ധി",
+"Scheme":"പദ്ധതി",
+"Regular":"റെഗുലർ",
+"Express":"എക്സ്പ്രസ്",
+"Karshaka":"കർഷക",
+"1 pavan = 8 grams. Weight is net of stones and wax. Final amount is set by the branch appraiser.":"1 പവൻ = 8 ഗ്രാം. കല്ലും മെഴുകും ഒഴിവാക്കിയുള്ള തൂക്കം. അന്തിമ തുക ശാഖയിലെ അപ്രൈസർ നിശ്ചയിക്കും.",
+"You can get up to":"നിങ്ങൾക്ക് ലഭിക്കാവുന്നത്",
+"Gold value":"സ്വർണ്ണത്തിന്റെ മൂല്യം",
+"Loan-to-value":"വായ്പ-മൂല്യ അനുപാതം",
+"Interest rate":"പലിശ നിരക്ക്",
+"Interest for full tenure":"മുഴുവൻ കാലാവധിയിലെ പലിശ",
+"Deposit amount":"നിക്ഷേപ തുക",
+"6 months":"6 മാസം",
+"60 months":"60 മാസം",
+"12 months":"12 മാസം",
+"1 year":"1 വർഷം",
+"7 years":"7 വർഷം",
+"Depositor":"നിക്ഷേപകൻ",
+"Member":"അംഗം",
+"Senior citizen":"മുതിർന്ന പൗരൻ",
+"Maturity value":"കാലാവധി തുക",
+"Principal":"മുതൽ",
+"Interest":"പലിശ",
+"Interest earned":"ലഭിക്കുന്ന പലിശ",
+"Monthly instalment":"പ്രതിമാസ തവണ",
+"Rate 8.50% p.a., compounded quarterly.":"വാർഷിക പലിശ 8.50%, പാദവാർഷിക കൂട്ടുപലിശ.",
+"You deposit":"നിങ്ങളുടെ നിക്ഷേപം",
+"Total deposited":"ആകെ നിക്ഷേപം",
+"Loan amount":"വായ്പ തുക",
+"Monthly EMI":"പ്രതിമാസ EMI",
+"Total interest":"ആകെ പലിശ",
+"Total payable":"ആകെ തിരിച്ചടവ്",
+"Gold loan in one visit":"ഒറ്റ സന്ദർശനത്തിൽ സ്വർണ്ണ വായ്പ",
+"How a gold loan works":"സ്വർണ്ണ വായ്പ എങ്ങനെ",
+"Bring your gold & KYC":"സ്വർണ്ണവും KYC രേഖകളും കൊണ്ടുവരൂ",
+"Ornaments or coins plus Aadhaar and PAN. New customers become members at the same counter.":"ആഭരണങ്ങളോ നാണയങ്ങളോ, കൂടെ ആധാറും പാനും. പുതിയ ഇടപാടുകാർക്ക് അതേ കൗണ്ടറിൽ അംഗത്വമെടുക്കാം.",
+"Appraisal in front of you":"നിങ്ങളുടെ മുന്നിൽ മൂല്യനിർണ്ണയം",
+"Our certified appraiser tests purity and weighs net gold. You see every reading.":"അംഗീകൃത അപ്രൈസർ പരിശുദ്ധി പരിശോധിച്ച് സ്വർണ്ണം തൂക്കുന്നു. ഓരോ അളവും നിങ്ങൾക്ക് കാണാം.",
+"Sealed & insured":"സീൽ ചെയ്ത്, ഇൻഷുർ ചെയ്ത്",
+"Ornaments are packed in a tamper-proof pouch you sign, then stored in our strong-room vault.":"നിങ്ങൾ ഒപ്പിടുന്ന, തുറന്നാൽ അറിയുന്ന പൗച്ചിൽ ആഭരണങ്ങൾ പായ്ക്ക് ചെയ്ത് സ്ട്രോങ് റൂമിൽ സൂക്ഷിക്കുന്നു.",
+"Cash or bank transfer":"പണമായോ ബാങ്ക് ട്രാൻസ്ഫറായോ",
+"Cash up to the legal limit, the rest by NEFT or IMPS to your account — usually within 30 minutes.":"നിയമപരമായ പരിധി വരെ പണമായി, ബാക്കി NEFT അല്ലെങ്കിൽ IMPS വഴി അക്കൗണ്ടിലേക്ക് — സാധാരണയായി 30 മിനിറ്റിനകം.",
+"A mutual benefit company":"ഒരു പരസ്പര സഹായ കമ്പനി",
+"Owned by the people it serves":"സേവിക്കുന്നവർ തന്നെ ഉടമകൾ",
+"A Nidhi is a company whose members save and borrow among themselves. Every depositor and borrower is a shareholder. The money raised in Alappuzha stays in Alappuzha and is lent back to the fishermen, coir workers, farmers, traders and families who put it there.":"അംഗങ്ങൾ പരസ്പരം സമ്പാദിക്കുകയും വായ്പയെടുക്കുകയും ചെയ്യുന്ന കമ്പനിയാണ് നിധി. ഓരോ നിക്ഷേപകനും വായ്പക്കാരനും ഓഹരി ഉടമയാണ്. ആലപ്പുഴയിൽ സമാഹരിക്കുന്ന പണം ആലപ്പുഴയിൽ തന്നെ നിലനിൽക്കുന്നു — അത് നിക്ഷേപിച്ച മത്സ്യത്തൊഴിലാളികൾക്കും കയർ തൊഴിലാളികൾക്കും കർഷകർക്കും വ്യാപാരികൾക്കും കുടുംബങ്ങൾക്കും തന്നെ വായ്പയായി തിരികെ നൽകുന്നു.",
+"We are incorporated under the Companies Act, 2013, and file our half-yearly returns with the Ministry of Corporate Affairs.":"കമ്പനീസ് ആക്ട്, 2013 പ്രകാരം രൂപീകരിച്ച ഞങ്ങൾ, അർദ്ധവാർഷിക റിട്ടേണുകൾ കോർപ്പറേറ്റ് കാര്യ മന്ത്രാലയത്തിൽ സമർപ്പിക്കുന്നു.",
+"branches in Alappuzha district":"ആലപ്പുഴ ജില്ലയിലെ ശാഖകൾ",
+"30 min":"30 മിനിറ്റ്",
+"typical gold loan turnaround":"സാധാരണ സ്വർണ്ണ വായ്പാ സമയം",
+"shareholding members":"ഓഹരി ഉടമകളായ അംഗങ്ങൾ",
+"6 days":"6 ദിവസം",
+"a week, 9:30 am to 5:30 pm":"ആഴ്ചയിൽ, രാവിലെ 9:30 മുതൽ വൈകിട്ട് 5:30 വരെ",
+"Figures are placeholders — replace with your actual numbers before launch.":"കണക്കുകൾ മാതൃക മാത്രം — പ്രസിദ്ധീകരിക്കുന്നതിനു മുമ്പ് യഥാർത്ഥ കണക്കുകൾ ചേർക്കുക.",
+"Become a member in one visit":"ഒറ്റ സന്ദർശനത്തിൽ അംഗമാകാം",
+"Our loans and deposits are open only to members, so every relationship begins with one share.":"ഞങ്ങളുടെ വായ്പകളും നിക്ഷേപങ്ങളും അംഗങ്ങൾക്ക് മാത്രമാണ്; അതിനാൽ എല്ലാ ബന്ധവും ഒരു ഓഹരിയിൽ തുടങ്ങുന്നു.",
+"Aadhaar card":"ആധാർ കാർഡ്",
+"Original for verification, plus one self-attested copy.":"പരിശോധനയ്ക്ക് അസ്സൽ, കൂടെ സ്വയം സാക്ഷ്യപ്പെടുത്തിയ ഒരു പകർപ്പ്.",
+"PAN card or Form 60":"പാൻ കാർഡ് അല്ലെങ്കിൽ ഫോം 60",
+"Required for deposits of ₹50,000 and above.":"₹50,000-ഉം അതിനു മുകളിലുമുള്ള നിക്ഷേപങ്ങൾക്ക് നിർബന്ധം.",
+"Two passport-size photographs":"രണ്ട് പാസ്പോർട്ട് സൈസ് ഫോട്ടോകൾ",
+"Recent colour photos. We can take one at the branch.":"അടുത്തിടെ എടുത്ത കളർ ഫോട്ടോ. ശാഖയിൽ വെച്ചും എടുക്കാം.",
+"Address proof, if different from Aadhaar":"ആധാറിലെ വിലാസം വ്യത്യസ്തമെങ്കിൽ വിലാസ രേഖ",
+"Electricity bill, ration card or voter ID.":"വൈദ്യുതി ബിൽ, റേഷൻ കാർഡ് അല്ലെങ്കിൽ വോട്ടർ ഐഡി.",
+"One equity share":"ഒരു ഇക്വിറ്റി ഓഹരി",
+"Voting rights at the Annual General Meeting":"വാർഷിക പൊതുയോഗത്തിൽ വോട്ടവകാശം",
+"Access to gold loans, deposits and savings":"സ്വർണ്ണ വായ്പ, നിക്ഷേപം, സമ്പാദ്യം എന്നിവ ലഭ്യം",
+"Nominee registration at joining":"ചേരുമ്പോൾ തന്നെ നോമിനി രജിസ്ട്രേഷൻ",
+"Dividend when declared by the Board":"ബോർഡ് പ്രഖ്യാപിക്കുമ്പോൾ ലാഭവിഹിതം",
+"Ask us to call you":"ഞങ്ങൾ വിളിക്കാം",
+"Branch locator":"ശാഖകൾ കണ്ടെത്താൻ",
+"Find us near you":"നിങ്ങളുടെ അടുത്തുള്ള ശാഖ",
+"Monday to Saturday, 9:30 am to 5:30 pm. Closed on Sundays, second Saturdays and public holidays.":"തിങ്കൾ മുതൽ ശനി വരെ, രാവിലെ 9:30 മുതൽ വൈകിട്ട് 5:30 വരെ. ഞായറാഴ്ചകളിലും രണ്ടാം ശനിയാഴ്ചകളിലും പൊതു അവധി ദിവസങ്ങളിലും അവധി.",
+"Sample branch list — addresses and phone numbers are placeholders.":"മാതൃകാ ശാഖാ പട്ടിക — വിലാസങ്ങളും ഫോൺ നമ്പറുകളും മാതൃക മാത്രം.",
+"Notices":"അറിയിപ്പുകൾ",
+"Member notices":"അംഗങ്ങൾക്കുള്ള അറിയിപ്പുകൾ",
+"Sep":"സെപ്",
+"Aug":"ഓഗ",
+"Jul":"ജൂലൈ",
+"Annual General Meeting 2026":"വാർഷിക പൊതുയോഗം 2026",
+"At the registered office, Alappuzha, at 11:00 am. Notice and annual report sent to all members.":"രജിസ്റ്റേർഡ് ഓഫീസിൽ, ആലപ്പുഴ, രാവിലെ 11:00-ന്. നോട്ടീസും വാർഷിക റിപ്പോർട്ടും എല്ലാ അംഗങ്ങൾക്കും അയച്ചിട്ടുണ്ട്.",
+"Revised deposit rates":"പുതുക്കിയ നിക്ഷേപ നിരക്കുകൾ",
+"New FD rates apply to deposits opened or renewed on or after 1 September 2026.":"2026 സെപ്റ്റംബർ 1-നോ അതിനു ശേഷമോ തുടങ്ങുന്നതോ പുതുക്കുന്നതോ ആയ നിക്ഷേപങ്ങൾക്ക് പുതിയ FD നിരക്കുകൾ ബാധകം.",
+"Onam holidays":"ഓണം അവധി",
+"All branches closed on Thiruvonam. Gold loan interest due dates falling on holidays move to the next working day.":"തിരുവോണത്തിന് എല്ലാ ശാഖകൾക്കും അവധി. അവധി ദിവസങ്ങളിൽ വരുന്ന സ്വർണ്ണ വായ്പാ പലിശ തീയതികൾ അടുത്ത പ്രവൃത്തി ദിവസത്തേക്ക് മാറും.",
+"Half-yearly return filed":"അർദ്ധവാർഷിക റിട്ടേൺ സമർപ്പിച്ചു",
+"Form NDH-3 for the half-year ended 31 March 2026 filed with the Registrar of Companies.":"2026 മാർച്ച് 31-ന് അവസാനിച്ച അർദ്ധവർഷത്തെ ഫോം NDH-3 രജിസ്ട്രാർ ഓഫ് കമ്പനീസിൽ സമർപ്പിച്ചു.",
+"Frequently asked questions":"പതിവ് ചോദ്യങ്ങൾ",
+"What is a Nidhi company?":"എന്താണ് നിധി കമ്പനി?",
+"A Nidhi is a company incorporated under the Companies Act, 2013 and governed by the Nidhi Rules, 2014. It exists to build saving habits among its members and lends only to them. It is regulated by the Ministry of Corporate Affairs.":"കമ്പനീസ് ആക്ട്, 2013 പ്രകാരം രൂപീകരിച്ച്, നിധി ചട്ടങ്ങൾ, 2014 അനുസരിച്ച് പ്രവർത്തിക്കുന്ന കമ്പനിയാണ് നിധി. അംഗങ്ങൾക്കിടയിൽ സമ്പാദ്യശീലം വളർത്തുകയാണ് ലക്ഷ്യം; വായ്പ നൽകുന്നത് അംഗങ്ങൾക്ക് മാത്രം. കോർപ്പറേറ്റ് കാര്യ മന്ത്രാലയമാണ് നിയന്ത്രിക്കുന്നത്.",
+"Can anyone deposit money with you?":"ആർക്കും നിങ്ങളിൽ പണം നിക്ഷേപിക്കാമോ?",
+"No. We accept deposits and give loans only to our members. You become a member by buying one equity share of ₹10 with your KYC documents — it takes about ten minutes at any branch.":"ഇല്ല. ഞങ്ങൾ നിക്ഷേപം സ്വീകരിക്കുന്നതും വായ്പ നൽകുന്നതും അംഗങ്ങൾക്ക് മാത്രമാണ്. KYC രേഖകളുമായി ₹10-ന്റെ ഒരു ഓഹരി വാങ്ങി അംഗമാകാം — ഏത് ശാഖയിലും ഏകദേശം പത്ത് മിനിറ്റ് മതി.",
+"How much can I get for my gold?":"എന്റെ സ്വർണ്ണത്തിന് എത്ര കിട്ടും?",
+"Up to 75% of the market value of the net gold content. Use the gold loan calculator above for an estimate; the branch appraiser confirms the final figure after testing.":"സ്വർണ്ണത്തിന്റെ വിപണി മൂല്യത്തിന്റെ 75% വരെ. ഏകദേശ തുകയറിയാൻ മുകളിലെ കാൽക്കുലേറ്റർ ഉപയോഗിക്കുക; പരിശോധനയ്ക്കു ശേഷം അന്തിമ തുക ശാഖയിലെ അപ്രൈസർ ഉറപ്പിക്കും.",
+"Is my gold safe with you?":"എന്റെ സ്വർണ്ണം നിങ്ങളുടെ പക്കൽ സുരക്ഷിതമാണോ?",
+"Your ornaments are sealed in a pouch you sign, stored in a burglary-resistant strong room, and covered by insurance for the whole loan period.":"നിങ്ങൾ ഒപ്പിട്ട പൗച്ചിൽ സീൽ ചെയ്ത്, കവർച്ചാ പ്രതിരോധ സ്ട്രോങ് റൂമിൽ സൂക്ഷിക്കുന്ന ആഭരണങ്ങൾക്ക് വായ്പാ കാലയളവ് മുഴുവൻ ഇൻഷുറൻസ് പരിരക്ഷയുണ്ട്.",
+"What happens if I can't repay on time?":"കൃത്യസമയത്ത് തിരിച്ചടയ്ക്കാൻ കഴിഞ്ഞില്ലെങ്കിൽ?",
+"Talk to your branch before the due date — you can pay the interest and renew. If a loan stays overdue we send written notices before any auction, and any surplus from an auction is returned to you.":"അവസാന തീയതിക്കു മുമ്പ് ശാഖയുമായി സംസാരിക്കുക — പലിശ അടച്ച് വായ്പ പുതുക്കാം. കുടിശ്ശിക തുടർന്നാൽ ലേലത്തിനു മുമ്പ് രേഖാമൂലം നോട്ടീസ് അയയ്ക്കും; ലേലത്തിൽ മിച്ചം വരുന്ന തുക നിങ്ങൾക്ക് തിരികെ നൽകും.",
+"Are my deposits insured by DICGC?":"എന്റെ നിക്ഷേപങ്ങൾക്ക് DICGC ഇൻഷുറൻസ് ഉണ്ടോ?",
+"No. Deposit insurance by DICGC applies only to banks. Nidhi deposits are not covered, which is one reason we keep lending secured against gold, property and deposits.":"ഇല്ല. DICGC നിക്ഷേപ ഇൻഷുറൻസ് ബാങ്കുകൾക്ക് മാത്രമാണ്. നിധി നിക്ഷേപങ്ങൾക്ക് അത് ബാധകമല്ല — അതുകൊണ്ടാണ് ഞങ്ങൾ സ്വർണ്ണം, വസ്തു, നിക്ഷേപം എന്നിവയുടെ ഈടിൽ മാത്രം വായ്പ നൽകുന്നത്.",
+"Walk in with gold. Walk out with cash.":"സ്വർണ്ണവുമായി വരൂ. പണവുമായി മടങ്ങൂ.",
+"Visit any of our 8 branches in Alappuzha district, Monday to Saturday.":"തിങ്കൾ മുതൽ ശനി വരെ, ആലപ്പുഴ ജില്ലയിലെ ഞങ്ങളുടെ 8 ശാഖകളിൽ ഏതിലും വരൂ.",
+"Find a branch":"ശാഖ കണ്ടെത്തുക",
+"Stay alert:":"ജാഗ്രത:",
+"Our staff will never ask for your OTP, PIN or password. We don't collect cash outside our branches except through ID-carrying RD agents. Report suspicious calls to the branch manager.":"ഞങ്ങളുടെ ജീവനക്കാർ ഒരിക്കലും OTP, PIN, പാസ്‌വേഡ് എന്നിവ ചോദിക്കില്ല. ഐഡി കാർഡുള്ള RD ഏജന്റുമാർ വഴിയല്ലാതെ ശാഖയ്ക്ക് പുറത്ത് പണം സ്വീകരിക്കില്ല. സംശയകരമായ കോളുകൾ ശാഖാ മാനേജരെ അറിയിക്കുക.",
+"Registered office: [Building name], Mullakkal, Alappuzha – 688 011, Kerala":"രജിസ്റ്റേർഡ് ഓഫീസ്: [കെട്ടിടത്തിന്റെ പേര്], മുല്ലയ്ക്കൽ, ആലപ്പുഴ – 688 011, കേരളം",
+"Phone:":"ഫോൺ:",
+"Email:":"ഇമെയിൽ:",
+"Company":"കമ്പനി",
+"Nodal officer: [Name]":"നോഡൽ ഓഫീസർ: [പേര്]",
+"Reply within 7 working days":"7 പ്രവൃത്തി ദിവസത്തിനകം മറുപടി",
+"Escalation: Registrar of Companies, Kerala":"അപ്പീൽ: രജിസ്ട്രാർ ഓഫ് കമ്പനീസ്, കേരളം",
+"· CIN: U65990KL2026PLN000000 · Incorporated under the Companies Act, 2013 and declared a Nidhi under Section 406 of the Act, governed by the Nidhi Rules, 2014 (as amended).":"· CIN: U65990KL2026PLN000000 · കമ്പനീസ് ആക്ട്, 2013 പ്രകാരം രൂപീകരിച്ചതും ആക്ടിലെ 406-ാം വകുപ്പ് പ്രകാരം നിധിയായി പ്രഖ്യാപിച്ചതും നിധി ചട്ടങ്ങൾ, 2014 (ഭേദഗതികളോടെ) അനുസരിച്ച് പ്രവർത്തിക്കുന്നതും.",
+"We deal only with our members. We are not a bank and not an RBI-registered NBFC; deposits are not insured by DICGC. Deposit rate information is for private circulation among members only. We do not run chit funds, issue cheque books or offer insurance or investment products.":"ഞങ്ങൾ അംഗങ്ങളുമായി മാത്രമാണ് ഇടപാട് നടത്തുന്നത്. ഞങ്ങൾ ബാങ്കോ RBI രജിസ്റ്റർ ചെയ്ത NBFC-യോ അല്ല; നിക്ഷേപങ്ങൾക്ക് DICGC ഇൻഷുറൻസ് ഇല്ല. നിക്ഷേപ നിരക്ക് വിവരങ്ങൾ അംഗങ്ങൾക്കിടയിൽ മാത്രം പ്രചരിപ്പിക്കാനുള്ളതാണ്. ഞങ്ങൾ ചിട്ടി നടത്തുകയോ ചെക്ക് ബുക്ക് നൽകുകയോ ഇൻഷുറൻസ്/നിക്ഷേപ ഉൽപ്പന്നങ്ങൾ വിൽക്കുകയോ ചെയ്യുന്നില്ല.",
+". All rights reserved.":". എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.",
+"Privacy policy · Terms of use · Fair practices code":"സ്വകാര്യതാ നയം · ഉപയോഗ നിബന്ധനകൾ · ന്യായമായ പ്രവർത്തന ചട്ടം",
+"Calculate":"കണക്കാക്കുക",
+"Rates":"നിരക്കുകൾ",
+"Apply":"അപേക്ഷിക്കുക",
+"Online access to your gold loan, deposit and savings accounts will open here once the member portal is live.":"നിങ്ങളുടെ സ്വർണ്ണ വായ്പ, നിക്ഷേപം, സേവിംഗ്സ് അക്കൗണ്ടുകൾ ഓൺലൈനായി കാണാനുള്ള സൗകര്യം അംഗ പോർട്ടൽ തുടങ്ങുമ്പോൾ ഇവിടെ ലഭ്യമാകും.",
+"Until then, your branch can share your account statement on WhatsApp or print a passbook update.":"അതുവരെ, നിങ്ങളുടെ ശാഖ അക്കൗണ്ട് സ്റ്റേറ്റ്മെന്റ് വാട്ട്സ്ആപ്പിൽ അയയ്ക്കുകയോ പാസ്ബുക്ക് പുതുക്കി നൽകുകയോ ചെയ്യും.",
+"Close":"അടയ്ക്കുക",
+"As on Aadhaar":"ആധാറിലുള്ളതുപോലെ",
+"10 digits":"10 അക്കങ്ങൾ",
+"Search town, taluk or PIN":"പട്ടണം, താലൂക്ക് അല്ലെങ്കിൽ PIN തിരയുക",
+"All":"എല്ലാം",
+"Alappuzha Main":"ആലപ്പുഴ മെയിൻ",
+"Cherthala":"ചേർത്തല",
+"Ambalappuzha":"അമ്പലപ്പുഴ",
+"Haripad":"ഹരിപ്പാട്",
+"Kayamkulam":"കായംകുളം",
+"Mavelikkara":"മാവേലിക്കര",
+"Chengannur":"ചെങ്ങന്നൂർ",
+"Ramankary":"രാമങ്കരി",
+"Karthikappally":"കാർത്തികപ്പള്ളി",
+"Kuttanad":"കുട്ടനാട്"
+};
+</script>
+<script>
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
 const inr = n => "₹ " + Math.round(n).toLocaleString("en-IN");
-document.querySelectorAll("[data-co]").forEach(e => e.textContent = CONFIG.company);
+let LANG = "en";
+try { LANG = location.hash === "#ml" ? "ml" : (localStorage.getItem("lang") || "en"); } catch(e) {}
+const ML = window.ML_TEXT || {};
+const t = s => (LANG === "ml" && ML[s]) || s;
+const L = (en, ml) => LANG === "ml" ? ml : en;
 
 /* gold ticker */
-(function(){
+function fillRates(){
   const g22 = CONFIG.gold22PerGram;
   $("#r22").textContent = inr(g22);
   $("#r24").textContent = inr(g22 * 24/22);
   $("#r18").textContent = inr(g22 * 18/22);
   $("#rLoan").textContent = inr(g22 * CONFIG.ltv);
-})();
+  $("#chipLoan").textContent = inr(g22 * CONFIG.ltv) + L(" per gram", " / ഗ്രാം");
+}
 
 /* slider */
 (function(){
@@ -904,11 +1377,13 @@ document.querySelectorAll("[data-co]").forEach(e => e.textContent = CONFIG.compa
   $("#slides").addEventListener("mouseleave", restart);
 })();
 
+/* header shadow on scroll */
+addEventListener("scroll", () => $("#hdr").classList.toggle("scrolled", scrollY > 10), {passive:true});
+
 /* segments in utility bar jump to product tabs */
 $$(".segs button").forEach(b => b.onclick = () => {
   $$(".segs button").forEach(x => x.setAttribute("aria-pressed", x === b));
-  const map = {gold:"gold", dep:"dep", loan:"loan", nri:"dep"};
-  openTab(map[b.dataset.seg]);
+  openTab({gold:"gold", dep:"dep", loan:"loan", nri:"dep"}[b.dataset.seg]);
   $("#products").scrollIntoView();
 });
 
@@ -921,13 +1396,13 @@ $$(".ptabs button").forEach(b => b.onclick = () => openTab(b.dataset.tab));
 $$("[data-open]").forEach(a => a.addEventListener("click", () => openTab(a.dataset.open)));
 
 /* rate table */
-(function(){
+function fillRateTable(){
   const best = Math.max(...CONFIG.fdRates.map(r => r[1]));
   $("#rateBody").innerHTML = CONFIG.fdRates.map(([m, r, s]) => {
     const y = (Math.pow(1 + r/400, 4) - 1) * 100;
-    return `<tr class="${r === best ? "best" : ""}"><td>${m} months</td><td class="r">${r.toFixed(2)}%</td><td class="r">${s.toFixed(2)}%</td><td class="r">${y.toFixed(2)}%</td></tr>`;
+    return `<tr class="${r === best ? "best" : ""}"><td>${m} ${L("months", "മാസം")}</td><td class="r">${r.toFixed(2)}%</td><td class="r">${s.toFixed(2)}%</td><td class="r">${y.toFixed(2)}%</td></tr>`;
   }).join("");
-})();
+}
 
 /* calculators */
 function openCalc(k){
@@ -943,98 +1418,131 @@ function segPick(id, cb){
   });
 }
 const pressed = id => $("#" + id + " button[aria-pressed='true']");
-function bars(pId, iId, p, i){ const t = p + i || 1; $(pId).style.width = (p/t*100) + "%"; $(iId).style.width = (i/t*100) + "%"; }
+function bars(pId, iId, p, i){ const tot = p + i || 1; $(pId).style.width = (p/tot*100) + "%"; $(iId).style.width = (i/tot*100) + "%"; }
+const PA = () => L("% p.a.", "% വാർഷികം");
+const MO = () => L(" months", " മാസം");
 
 function calcGold(){
   const w = +$("#gW").value, k = +pressed("gK").dataset.k, s = pressed("gS");
   const r = +s.dataset.r, m = +s.dataset.m;
   const val = w * CONFIG.gold22PerGram * k / 22, loan = val * CONFIG.ltv;
-  $("#gWo").textContent = w + " g (" + (w/8).toFixed(1) + " pavan)";
+  $("#gWo").textContent = L(`${w} g (${(w/8).toFixed(1)} pavan)`, `${w} ഗ്രാം (${(w/8).toFixed(1)} പവൻ)`);
   $("#gOut").textContent = inr(loan);
   $("#gVal").textContent = inr(val);
-  $("#gRate").textContent = r.toFixed(2) + "% p.a.";
-  $("#gInt").textContent = inr(loan * r/100 * m/12) + " / " + m + " mo";
+  $("#gRate").textContent = r.toFixed(2) + PA();
+  $("#gInt").textContent = inr(loan * r/100 * m/12) + " / " + m + MO();
 }
 function fdRateFor(m, sen){ const row = CONFIG.fdRates.filter(r => r[0] <= m).pop() || CONFIG.fdRates[0]; return sen ? row[2] : row[1]; }
 function calcFD(){
   const P = +$("#fP").value, m = +$("#fT").value, sen = pressed("fSen").dataset.s === "1";
   const r = fdRateFor(m, sen), A = P * Math.pow(1 + r/400, m/3);
-  $("#fPo").textContent = inr(P); $("#fTo").textContent = m + " months";
-  $("#fOut").textContent = inr(A); $("#fRate").textContent = r.toFixed(2) + "% p.a.";
+  $("#fPo").textContent = inr(P); $("#fTo").textContent = m + MO();
+  $("#fOut").textContent = inr(A); $("#fRate").textContent = r.toFixed(2) + PA();
   $("#fInt").textContent = inr(A - P); bars("#fBarP", "#fBarI", P, A - P);
 }
 function calcRD(){
   const M = +$("#rM").value, n = +$("#rT").value, r = CONFIG.rdRate;
   let A = 0; for (let k = 1; k <= n; k++) A += M * Math.pow(1 + r/400, k/3);
-  $("#rMo").textContent = inr(M); $("#rTo").textContent = n + " months";
+  $("#rMo").textContent = inr(M); $("#rTo").textContent = n + MO();
   $("#rOut").textContent = inr(A); $("#rDep").textContent = inr(M*n);
   $("#rInt").textContent = inr(A - M*n); bars("#rBarP", "#rBarI", M*n, A - M*n);
 }
 function calcEMI(){
   const P = +$("#eP").value, r = +$("#eR").value, n = +$("#eT").value, i = r/1200;
   const emi = P * i * Math.pow(1+i, n) / (Math.pow(1+i, n) - 1), tot = emi * n;
-  $("#ePo").textContent = inr(P); $("#eRo").textContent = r.toFixed(2) + "%"; $("#eTo").textContent = (n/12) + " years";
+  $("#ePo").textContent = inr(P); $("#eRo").textContent = r.toFixed(2) + "%"; $("#eTo").textContent = (n/12) + L(" years", " വർഷം");
   $("#eOut").textContent = inr(emi); $("#eInt").textContent = inr(tot - P); $("#eTot").textContent = inr(tot);
   bars("#eBarP", "#eBarI", P, tot - P);
 }
-["gW"].forEach(id => $("#"+id).oninput = calcGold);
+$("#gW").oninput = calcGold;
 ["fP","fT"].forEach(id => $("#"+id).oninput = calcFD);
 ["rM","rT"].forEach(id => $("#"+id).oninput = calcRD);
 ["eP","eR","eT"].forEach(id => $("#"+id).oninput = calcEMI);
 segPick("gK", calcGold); segPick("gS", calcGold); segPick("fSen", calcFD);
-calcGold(); calcFD(); calcRD(); calcEMI();
+const calcAll = () => { calcGold(); calcFD(); calcRD(); calcEMI(); };
 
 /* branches */
-(function(){
+let tal = "All";
+function isOpen(){
+  const d = new Date(new Date().toLocaleString("en-US", {timeZone:"Asia/Kolkata"}));
+  const mins = d.getHours()*60 + d.getMinutes();
+  const secondSat = d.getDay() === 6 && d.getDate() > 7 && d.getDate() <= 14;
+  return d.getDay() !== 0 && !secondSat && mins >= 570 && mins < 1050;
+}
+function fillBranchControls(){
   const taluks = ["All", ...new Set(CONFIG.branches.map(b => b.t))];
-  let tal = "All";
-  $("#bTaluk").innerHTML = taluks.map(t => `<button type="button" aria-pressed="${t==="All"}" data-t="${t}">${t}</button>`).join("");
-  $$("#bTaluk button").forEach(b => b.onclick = () => { tal = b.dataset.t; $$("#bTaluk button").forEach(x => x.setAttribute("aria-pressed", x === b)); render(); });
-  $("#bq").oninput = render;
-  $("#lBranch").innerHTML = CONFIG.branches.map(b => `<option>${b.n}</option>`).join("");
-  function isOpen(){
-    const d = new Date(new Date().toLocaleString("en-US", {timeZone:"Asia/Kolkata"}));
-    const mins = d.getHours()*60 + d.getMinutes();
-    const secondSat = d.getDay() === 6 && d.getDate() > 7 && d.getDate() <= 14;
-    return d.getDay() !== 0 && !secondSat && mins >= 570 && mins < 1050;
-  }
-  function render(){
-    const q = $("#bq").value.trim().toLowerCase(), open = isOpen();
-    const list = CONFIG.branches.filter(b => (tal === "All" || b.t === tal) && (!q || (b.n+b.t+b.a+b.pin).toLowerCase().includes(q)));
-    $("#blist").innerHTML = list.length ? list.map(b => `
-      <div class="branch"><span class="taluk">${b.t} taluk</span><h4>${b.n}</h4><p>${b.a} – ${b.pin}</p>
-      <span class="ph">${b.ph}</span><span class="open ${open ? "is-open" : ""}">${open ? "Open now" : "Closed now"} · 9:30–5:30</span></div>`).join("")
-      : `<p class="empty">No branch matches “${q}”. Try a taluk name like Kuttanad or Cherthala.</p>`;
-  }
-  render();
-})();
+  $("#bTaluk").innerHTML = taluks.map(x => `<button type="button" aria-pressed="${x===tal}" data-t="${x}">${t(x)}</button>`).join("");
+  $$("#bTaluk button").forEach(b => b.onclick = () => { tal = b.dataset.t; $$("#bTaluk button").forEach(x => x.setAttribute("aria-pressed", x === b)); renderBranches(); });
+  const sel = $("#lBranch").selectedIndex;
+  $("#lBranch").innerHTML = CONFIG.branches.map(b => `<option>${t(b.n)}</option>`).join("");
+  if (sel > 0) $("#lBranch").selectedIndex = sel;
+}
+function renderBranches(){
+  const q = $("#bq").value.trim().toLowerCase(), open = isOpen();
+  const list = CONFIG.branches.filter(b => (tal === "All" || b.t === tal) &&
+    (!q || [b.n, b.t, b.a, b.pin, ML[b.n], ML[b.t]].join(" ").toLowerCase().includes(q)));
+  $("#blist").innerHTML = list.length ? list.map(b => `
+    <div class="branch"><span class="taluk">${L(b.t + " taluk", t(b.t) + " താലൂക്ക്")}</span><h4>${t(b.n)}</h4><p>${b.a} – ${b.pin}</p>
+    <span class="ph">${b.ph}</span><span class="open ${open ? "is-open" : ""}">${open ? L("Open now", "ഇപ്പോൾ തുറന്നിരിക്കുന്നു") : L("Closed now", "ഇപ്പോൾ അടച്ചിരിക്കുന്നു")} · 9:30–5:30</span></div>`).join("")
+    : `<p class="empty">${L(`No branch matches “${q}”. Try a taluk name like Kuttanad or Cherthala.`, `“${q}” എന്നതിന് ശാഖയൊന്നും കണ്ടെത്തിയില്ല. കുട്ടനാട്, ചേർത്തല പോലുള്ള താലൂക്ക് പേര് ശ്രമിക്കൂ.`)}</p>`;
+}
+$("#bq").oninput = renderBranches;
 
 /* lead form */
 $("#leadForm").addEventListener("submit", e => {
   e.preventDefault();
   const name = $("#lName").value.trim(), ph = $("#lPhone").value.replace(/\D/g, ""), err = $("#lErr");
   let msg = "";
-  if (!name) msg = "Enter your name so the branch knows who to ask for.";
-  else if (!/^[6-9]\d{9}$/.test(ph)) msg = "Enter a 10-digit Indian mobile number starting with 6, 7, 8 or 9.";
-  else if (!$("#lConsent").checked) msg = "Tick the box to let us call you back.";
+  if (!name) msg = L("Enter your name so the branch knows who to ask for.", "ശാഖയ്ക്ക് നിങ്ങളെ തിരിച്ചറിയാൻ പേര് നൽകുക.");
+  else if (!/^[6-9]\d{9}$/.test(ph)) msg = L("Enter a 10-digit Indian mobile number starting with 6, 7, 8 or 9.", "6, 7, 8 അല്ലെങ്കിൽ 9-ൽ തുടങ്ങുന്ന 10 അക്ക മൊബൈൽ നമ്പർ നൽകുക.");
+  else if (!$("#lConsent").checked) msg = L("Tick the box to let us call you back.", "ഞങ്ങൾ തിരികെ വിളിക്കാൻ ബോക്സിൽ ടിക്ക് ചെയ്യുക.");
   err.textContent = msg; err.hidden = !msg;
   if (msg) return;
   $("#leadForm").hidden = true;
-  const ok = $("#leadOk");
-  ok.textContent = `Thank you, ${name}. Our ${$("#lBranch").value} branch will call you on ${ph.slice(0,5)} ${ph.slice(5)} about ${$("#lProd").value.toLowerCase()} within one working day. (Demo — not yet connected to the branch.)`;
+  const ok = $("#leadOk"), br = $("#lBranch").value, pr = $("#lProd").value, num = ph.slice(0,5) + " " + ph.slice(5);
+  ok.textContent = L(
+    `Thank you, ${name}. Our ${br} branch will call you on ${num} about ${pr.toLowerCase()} within one working day. (Demo — not yet connected to the branch.)`,
+    `നന്ദി, ${name}. ${pr} സംബന്ധിച്ച് ഞങ്ങളുടെ ${br} ശാഖ ഒരു പ്രവൃത്തി ദിവസത്തിനകം ${num} എന്ന നമ്പറിൽ വിളിക്കും. (ഡെമോ — ശാഖയുമായി ഇതുവരെ ബന്ധിപ്പിച്ചിട്ടില്ല.)`);
   ok.hidden = false;
 });
 
-/* menu, login modal, language */
+/* language switch: walks every text node and swaps English for Malayalam */
+const EN = new WeakMap();
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.title = L("Harithapuram Nidhi", "ഹരിതപുരം നിധി");
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => n.parentElement.closest("script,style") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  let n;
+  while ((n = walker.nextNode())) {
+    if (!EN.has(n)) EN.set(n, n.nodeValue);
+    const en = EN.get(n), key = en.replace(/\s+/g, " ").trim();
+    if (!key) continue;
+    if (LANG === "ml" && ML[key]) n.nodeValue = en.replace(en.trim(), ML[key]);
+    else n.nodeValue = en;
+  }
+  $$("[placeholder]").forEach(el => {
+    if (!el.dataset.en) el.dataset.en = el.placeholder;
+    el.placeholder = LANG === "ml" && ML[el.dataset.en] || el.dataset.en;
+  });
+  $$("[data-co]").forEach(e => e.textContent = L(CONFIG.company, CONFIG.companyMl));
+  $("#langLabel").textContent = L("മലയാളം", "English");
+  fillRates(); fillRateTable(); calcAll(); fillBranchControls(); renderBranches();
+}
+$("#langBtn").onclick = () => {
+  LANG = LANG === "ml" ? "en" : "ml";
+  try { localStorage.setItem("lang", LANG); } catch(e) {}
+  applyLang();
+};
+applyLang();
+
+/* menu, login modal */
 $("#burger").onclick = () => { const d = $("#drawer"); d.classList.toggle("open"); $("#burger").setAttribute("aria-expanded", d.classList.contains("open")); };
 $$("#drawer a").forEach(a => a.addEventListener("click", () => $("#drawer").classList.remove("open")));
-const loginHTML = $("#modal .box").innerHTML;
-$$("[data-login]").forEach(b => b.addEventListener("click", e => { e.preventDefault(); $("#modal .box").innerHTML = loginHTML; $("#mClose").onclick = () => $("#modal").hidden = true; $("#modal").hidden = false; $("#mClose").focus(); }));
+$$("[data-login]").forEach(b => b.addEventListener("click", e => { e.preventDefault(); $("#modal").hidden = false; $("#mClose").focus(); }));
 $("#mClose").onclick = () => $("#modal").hidden = true;
 $("#modal").addEventListener("click", e => { if (e.target.id === "modal") $("#modal").hidden = true; });
 document.addEventListener("keydown", e => { if (e.key === "Escape") $("#modal").hidden = true; });
-$("#langBtn").onclick = () => { $("#modal .box").innerHTML = loginHTML; $("#mClose").onclick = () => $("#modal").hidden = true; $("#mTitle").textContent = "മലയാളം"; $("#modal .box p").textContent = "The Malayalam version of this site is being prepared."; $("#modal .box p + p").textContent = "മലയാളം പതിപ്പ് ഉടൻ ലഭ്യമാകും."; $("#modal").hidden = false; };
 </script>
-
 </body>
 </html>
